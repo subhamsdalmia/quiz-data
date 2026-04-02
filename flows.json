@@ -1,7 +1,8 @@
 {
   "flows": {
     "ml_debug": { "start": "q_problem" },
-    "data_issues": { "start": "q_data_entry" }
+    "data_issues": { "start": "q_data_entry" },
+    "model_select": { "start": "q_model_entry" }
   },
   "nodes": {
 
@@ -121,7 +122,8 @@
       "options": [
         { "text": "Linear model", "next": "r_underfit_linear" },
         { "text": "Basic ML model", "next": "r_underfit_basic" },
-        { "text": "Not sure / Data issue suspected", "next": "q_data_entry" }
+        { "text": "Not sure / Need better model", "next": "q_model_entry" },
+        { "text": "Data issue suspected", "next": "q_data_entry" }
       ]
     },
 
@@ -132,7 +134,8 @@
       "solutions": [
         "Add polynomial features",
         "Switch to nonlinear models"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "r_underfit_basic": {
@@ -143,7 +146,7 @@
         "Use more advanced algorithms",
         "Increase feature set"
       ],
-      "next": "q_data_entry"
+      "next": "q_model_entry"
     },
 
     "r_slow_intro": {
@@ -255,7 +258,8 @@
       "solutions": [
         "Use mean/median imputation",
         "Drop rows if safe"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "r_missing_high": {
@@ -266,7 +270,8 @@
         "Use advanced imputation",
         "Consider dropping columns",
         "Investigate data collection"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "q_imbalance_type": {
@@ -285,7 +290,8 @@
       "solutions": [
         "Use class weights",
         "Try stratified sampling"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "r_imbalance_extreme": {
@@ -296,7 +302,8 @@
         "Use SMOTE",
         "Use resampling",
         "Use anomaly detection models"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "q_noise_type": {
@@ -315,7 +322,8 @@
       "solutions": [
         "Clean labels",
         "Use robust models"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "r_noise_outliers": {
@@ -325,7 +333,8 @@
       "solutions": [
         "Remove outliers",
         "Use robust scaling"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "q_leakage_check": {
@@ -344,7 +353,8 @@
       "solutions": [
         "Remove leaked features",
         "Rebuild pipeline correctly"
-      ]
+      ],
+      "next": "q_model_entry"
     },
 
     "r_leakage_unsure": {
@@ -354,6 +364,102 @@
       "solutions": [
         "Audit features",
         "Check train-test split carefully"
+      ],
+      "next": "q_model_entry"
+    },
+
+    "q_model_entry": {
+      "type": "question",
+      "text": "What type of problem are you solving?",
+      "options": [
+        { "text": "Classification", "next": "q_clf_data_size" },
+        { "text": "Regression", "next": "q_reg_data_size" }
+      ]
+    },
+
+    "q_clf_data_size": {
+      "type": "question",
+      "text": "What is your dataset size?",
+      "options": [
+        { "text": "Small (<10k rows)", "next": "r_clf_small" },
+        { "text": "Medium (10k–100k)", "next": "r_clf_medium" },
+        { "text": "Large (>100k)", "next": "r_clf_large" }
+      ]
+    },
+
+    "r_clf_small": {
+      "type": "result",
+      "title": "Recommended Models (Small Classification)",
+      "description": "Simple models work well on small data.",
+      "solutions": [
+        "Logistic Regression",
+        "KNN",
+        "Decision Trees"
+      ]
+    },
+
+    "r_clf_medium": {
+      "type": "result",
+      "title": "Recommended Models (Medium Classification)",
+      "description": "Balanced complexity models perform best.",
+      "solutions": [
+        "Random Forest",
+        "XGBoost",
+        "SVM"
+      ]
+    },
+
+    "r_clf_large": {
+      "type": "result",
+      "title": "Recommended Models (Large Classification)",
+      "description": "Scalable models are required.",
+      "solutions": [
+        "XGBoost",
+        "LightGBM",
+        "Neural Networks"
+      ]
+    },
+
+    "q_reg_data_size": {
+      "type": "question",
+      "text": "What is your dataset size?",
+      "options": [
+        { "text": "Small (<10k rows)", "next": "r_reg_small" },
+        { "text": "Medium (10k–100k)", "next": "r_reg_medium" },
+        { "text": "Large (>100k)", "next": "r_reg_large" }
+      ]
+    },
+
+    "r_reg_small": {
+      "type": "result",
+      "title": "Recommended Models (Small Regression)",
+      "description": "Start simple.",
+      "solutions": [
+        "Linear Regression",
+        "Ridge/Lasso",
+        "SVR"
+      ]
+    },
+
+    "r_reg_medium": {
+      "type": "result",
+      "title": "Recommended Models (Medium Regression)",
+      "description": "Handle complexity better.",
+      "solutions": [
+        "Random Forest Regressor",
+        "XGBoost",
+        "Gradient Boosting"
+      ]
+    },
+
+    "r_reg_large": {
+      "type": "result",
+      "title": "Recommended Models (Large Regression)",
+      "description": "Use scalable methods.",
+      "solutions": [
+        "LightGBM",
+        "XGBoost",
+        "Neural Networks"
       ]
     }
 
