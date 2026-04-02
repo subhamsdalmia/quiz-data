@@ -1,0 +1,361 @@
+{
+  "flows": {
+    "ml_debug": { "start": "q_problem" },
+    "data_issues": { "start": "q_data_entry" }
+  },
+  "nodes": {
+
+    "q_problem": {
+      "type": "question",
+      "text": "What issue are you facing?",
+      "options": [
+        { "text": "High training accuracy, low test accuracy", "next": "r_overfit_intro" },
+        { "text": "Low accuracy on both training and test", "next": "r_underfit_intro" },
+        { "text": "Model training is very slow", "next": "r_slow_intro" },
+        { "text": "Model predictions are inconsistent", "next": "r_instability_intro" }
+      ]
+    },
+
+    "r_overfit_intro": {
+      "type": "result",
+      "title": "Overfitting Detected",
+      "description": "Your model is learning noise instead of general patterns.",
+      "solutions": [
+        "Reduce model complexity",
+        "Use regularization",
+        "Add more training data"
+      ],
+      "next": "q_overfit_model"
+    },
+
+    "q_overfit_model": {
+      "type": "question",
+      "text": "What type of model are you using?",
+      "options": [
+        { "text": "Neural Network", "next": "r_overfit_nn" },
+        { "text": "Tree-based model", "next": "r_overfit_tree" },
+        { "text": "Linear model", "next": "r_overfit_linear" }
+      ]
+    },
+
+    "r_overfit_nn": {
+      "type": "result",
+      "title": "Overfitting in Neural Networks",
+      "description": "NNs overfit easily with limited data.",
+      "solutions": [
+        "Apply dropout",
+        "Use early stopping",
+        "Reduce layers or neurons"
+      ],
+      "next": "q_overfit_data_size"
+    },
+
+    "r_overfit_tree": {
+      "type": "result",
+      "title": "Overfitting in Tree Models",
+      "description": "Trees can memorize data if too deep.",
+      "solutions": [
+        "Limit max depth",
+        "Use pruning",
+        "Use Random Forest instead"
+      ],
+      "next": "q_overfit_data_size"
+    },
+
+    "r_overfit_linear": {
+      "type": "result",
+      "title": "Overfitting in Linear Models",
+      "description": "Too many features can cause overfitting.",
+      "solutions": [
+        "Apply L1/L2 regularization",
+        "Remove irrelevant features"
+      ],
+      "next": "q_overfit_data_size"
+    },
+
+    "q_overfit_data_size": {
+      "type": "question",
+      "text": "How large is your dataset?",
+      "options": [
+        { "text": "Small dataset", "next": "r_overfit_small_data" },
+        { "text": "Large dataset", "next": "r_overfit_large_data" }
+      ]
+    },
+
+    "r_overfit_small_data": {
+      "type": "result",
+      "title": "Overfitting due to Small Data",
+      "description": "Model memorizes limited examples.",
+      "solutions": [
+        "Collect more data",
+        "Use data augmentation",
+        "Use simpler models"
+      ]
+    },
+
+    "r_overfit_large_data": {
+      "type": "result",
+      "title": "Overfitting despite Large Data",
+      "description": "Model may still be too complex.",
+      "solutions": [
+        "Reduce model complexity",
+        "Apply stronger regularization"
+      ]
+    },
+
+    "r_underfit_intro": {
+      "type": "result",
+      "title": "Underfitting Detected",
+      "description": "Model is too simple to capture patterns.",
+      "solutions": [
+        "Increase model complexity",
+        "Add more features",
+        "Train longer"
+      ],
+      "next": "q_underfit_model"
+    },
+
+    "q_underfit_model": {
+      "type": "question",
+      "text": "What model are you using?",
+      "options": [
+        { "text": "Linear model", "next": "r_underfit_linear" },
+        { "text": "Basic ML model", "next": "r_underfit_basic" },
+        { "text": "Not sure / Data issue suspected", "next": "q_data_entry" }
+      ]
+    },
+
+    "r_underfit_linear": {
+      "type": "result",
+      "title": "Underfitting in Linear Models",
+      "description": "Linear models may not capture complex relationships.",
+      "solutions": [
+        "Add polynomial features",
+        "Switch to nonlinear models"
+      ]
+    },
+
+    "r_underfit_basic": {
+      "type": "result",
+      "title": "Model Too Simple",
+      "description": "Your model lacks learning capacity.",
+      "solutions": [
+        "Use more advanced algorithms",
+        "Increase feature set"
+      ],
+      "next": "q_data_entry"
+    },
+
+    "r_slow_intro": {
+      "type": "result",
+      "title": "Slow Training Detected",
+      "description": "Your model is taking too long to train.",
+      "solutions": [
+        "Optimize data pipeline",
+        "Reduce feature size"
+      ],
+      "next": "q_slow_cause"
+    },
+
+    "q_slow_cause": {
+      "type": "question",
+      "text": "What might be causing the slowdown?",
+      "options": [
+        { "text": "Large dataset", "next": "r_slow_data" },
+        { "text": "Complex model", "next": "r_slow_model" }
+      ]
+    },
+
+    "r_slow_data": {
+      "type": "result",
+      "title": "Large Dataset Issue",
+      "description": "Training on large data takes time.",
+      "solutions": [
+        "Use sampling",
+        "Use distributed training"
+      ]
+    },
+
+    "r_slow_model": {
+      "type": "result",
+      "title": "Model Complexity Issue",
+      "description": "Model may be too heavy.",
+      "solutions": [
+        "Reduce layers or depth",
+        "Use simpler algorithms"
+      ]
+    },
+
+    "r_instability_intro": {
+      "type": "result",
+      "title": "Prediction Instability",
+      "description": "Model outputs vary too much.",
+      "solutions": [
+        "Check data consistency",
+        "Use cross-validation"
+      ],
+      "next": "q_instability_reason"
+    },
+
+    "q_instability_reason": {
+      "type": "question",
+      "text": "What seems inconsistent?",
+      "options": [
+        { "text": "Different results each run", "next": "r_randomness" },
+        { "text": "Highly sensitive to input changes", "next": "r_sensitivity" },
+        { "text": "Data might be messy", "next": "q_data_entry" }
+      ]
+    },
+
+    "r_randomness": {
+      "type": "result",
+      "title": "Randomness Issue",
+      "description": "Model randomness not controlled.",
+      "solutions": [
+        "Set random seed",
+        "Use deterministic settings"
+      ]
+    },
+
+    "r_sensitivity": {
+      "type": "result",
+      "title": "High Sensitivity",
+      "description": "Model reacts strongly to small changes.",
+      "solutions": [
+        "Normalize data",
+        "Use regularization"
+      ],
+      "next": "q_data_entry"
+    },
+
+    "q_data_entry": {
+      "type": "question",
+      "text": "What kind of data issue do you suspect?",
+      "options": [
+        { "text": "Missing values", "next": "q_missing_type" },
+        { "text": "Imbalanced dataset", "next": "q_imbalance_type" },
+        { "text": "Noisy data", "next": "q_noise_type" },
+        { "text": "Possible data leakage", "next": "q_leakage_check" }
+      ]
+    },
+
+    "q_missing_type": {
+      "type": "question",
+      "text": "How frequent are missing values?",
+      "options": [
+        { "text": "Few missing values", "next": "r_missing_low" },
+        { "text": "Many missing values", "next": "r_missing_high" }
+      ]
+    },
+
+    "r_missing_low": {
+      "type": "result",
+      "title": "Low Missing Data",
+      "description": "Small amount of missing data.",
+      "solutions": [
+        "Use mean/median imputation",
+        "Drop rows if safe"
+      ]
+    },
+
+    "r_missing_high": {
+      "type": "result",
+      "title": "High Missing Data",
+      "description": "Significant missing values.",
+      "solutions": [
+        "Use advanced imputation",
+        "Consider dropping columns",
+        "Investigate data collection"
+      ]
+    },
+
+    "q_imbalance_type": {
+      "type": "question",
+      "text": "How severe is class imbalance?",
+      "options": [
+        { "text": "Moderate imbalance", "next": "r_imbalance_moderate" },
+        { "text": "Extreme imbalance", "next": "r_imbalance_extreme" }
+      ]
+    },
+
+    "r_imbalance_moderate": {
+      "type": "result",
+      "title": "Moderate Imbalance",
+      "description": "Classes are uneven but manageable.",
+      "solutions": [
+        "Use class weights",
+        "Try stratified sampling"
+      ]
+    },
+
+    "r_imbalance_extreme": {
+      "type": "result",
+      "title": "Extreme Imbalance",
+      "description": "Minority class is very rare.",
+      "solutions": [
+        "Use SMOTE",
+        "Use resampling",
+        "Use anomaly detection models"
+      ]
+    },
+
+    "q_noise_type": {
+      "type": "question",
+      "text": "What kind of noise do you observe?",
+      "options": [
+        { "text": "Incorrect labels", "next": "r_noise_labels" },
+        { "text": "Outliers in data", "next": "r_noise_outliers" }
+      ]
+    },
+
+    "r_noise_labels": {
+      "type": "result",
+      "title": "Label Noise",
+      "description": "Incorrect labels degrade learning.",
+      "solutions": [
+        "Clean labels",
+        "Use robust models"
+      ]
+    },
+
+    "r_noise_outliers": {
+      "type": "result",
+      "title": "Outlier Noise",
+      "description": "Extreme values affect performance.",
+      "solutions": [
+        "Remove outliers",
+        "Use robust scaling"
+      ]
+    },
+
+    "q_leakage_check": {
+      "type": "question",
+      "text": "Do features include future or target-related information?",
+      "options": [
+        { "text": "Yes", "next": "r_leakage_yes" },
+        { "text": "Not sure", "next": "r_leakage_unsure" }
+      ]
+    },
+
+    "r_leakage_yes": {
+      "type": "result",
+      "title": "Data Leakage Detected",
+      "description": "Model has access to future or target info.",
+      "solutions": [
+        "Remove leaked features",
+        "Rebuild pipeline correctly"
+      ]
+    },
+
+    "r_leakage_unsure": {
+      "type": "result",
+      "title": "Possible Data Leakage",
+      "description": "Leakage might exist.",
+      "solutions": [
+        "Audit features",
+        "Check train-test split carefully"
+      ]
+    }
+
+  }
+}
