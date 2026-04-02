@@ -1,0 +1,236 @@
+{
+  "flows": {
+    "ml_debug": { "start": "q_problem" }
+  },
+
+  "nodes": {
+
+    "q_problem": {
+      "type": "question",
+      "text": "What issue are you facing?",
+      "options": [
+        { "text": "High training accuracy, low test accuracy", "next": "r_overfit_intro" },
+        { "text": "Low accuracy on both training and test", "next": "r_underfit_intro" },
+        { "text": "Model training is very slow", "next": "r_slow_intro" },
+        { "text": "Model predictions are inconsistent", "next": "r_instability_intro" }
+      ]
+    },
+
+    // OVERFITTING FLOW
+
+    "r_overfit_intro": {
+      "type": "result",
+      "title": "Overfitting Detected",
+      "description": "Your model is learning noise instead of general patterns.",
+      "solutions": [
+        "Reduce model complexity",
+        "Use regularization",
+        "Add more training data"
+      ],
+      "next": "q_overfit_model"
+    },
+
+    "q_overfit_model": {
+      "type": "question",
+      "text": "What type of model are you using?",
+      "options": [
+        { "text": "Neural Network", "next": "r_overfit_nn" },
+        { "text": "Tree-based model", "next": "r_overfit_tree" },
+        { "text": "Linear model", "next": "r_overfit_linear" }
+      ]
+    },
+
+    "r_overfit_nn": {
+      "type": "result",
+      "title": "Overfitting in Neural Networks",
+      "description": "NNs overfit easily with limited data.",
+      "solutions": [
+        "Apply dropout",
+        "Use early stopping",
+        "Reduce layers or neurons"
+      ],
+      "next": "q_overfit_data_size"
+    },
+
+    "r_overfit_tree": {
+      "type": "result",
+      "title": "Overfitting in Tree Models",
+      "description": "Trees can memorize data if too deep.",
+      "solutions": [
+        "Limit max depth",
+        "Use pruning",
+        "Use Random Forest instead"
+      ],
+      "next": "q_overfit_data_size"
+    },
+
+    "r_overfit_linear": {
+      "type": "result",
+      "title": "Overfitting in Linear Models",
+      "description": "Too many features can cause overfitting.",
+      "solutions": [
+        "Apply L1/L2 regularization",
+        "Remove irrelevant features"
+      ],
+      "next": "q_overfit_data_size"
+    },
+
+    "q_overfit_data_size": {
+      "type": "question",
+      "text": "How large is your dataset?",
+      "options": [
+        { "text": "Small dataset", "next": "r_overfit_small_data" },
+        { "text": "Large dataset", "next": "r_overfit_large_data" }
+      ]
+    },
+
+    "r_overfit_small_data": {
+      "type": "result",
+      "title": "Overfitting due to Small Data",
+      "description": "Model memorizes limited examples.",
+      "solutions": [
+        "Collect more data",
+        "Use data augmentation",
+        "Use simpler models"
+      ]
+    },
+
+    "r_overfit_large_data": {
+      "type": "result",
+      "title": "Overfitting despite Large Data",
+      "description": "Model may still be too complex.",
+      "solutions": [
+        "Reduce model complexity",
+        "Apply stronger regularization"
+      ]
+    },
+
+    // UNDERFITTING FLOW
+
+    "r_underfit_intro": {
+      "type": "result",
+      "title": "Underfitting Detected",
+      "description": "Model is too simple to capture patterns.",
+      "solutions": [
+        "Increase model complexity",
+        "Add more features",
+        "Train longer"
+      ],
+      "next": "q_underfit_model"
+    },
+
+    "q_underfit_model": {
+      "type": "question",
+      "text": "What model are you using?",
+      "options": [
+        { "text": "Linear model", "next": "r_underfit_linear" },
+        { "text": "Basic ML model", "next": "r_underfit_basic" }
+      ]
+    },
+
+    "r_underfit_linear": {
+      "type": "result",
+      "title": "Underfitting in Linear Models",
+      "description": "Linear models may not capture complex relationships.",
+      "solutions": [
+        "Add polynomial features",
+        "Switch to nonlinear models"
+      ]
+    },
+
+    "r_underfit_basic": {
+      "type": "result",
+      "title": "Model Too Simple",
+      "description": "Your model lacks learning capacity.",
+      "solutions": [
+        "Use more advanced algorithms",
+        "Increase feature set"
+      ]
+    },
+
+    // SLOW MODEL FLOW
+
+    "r_slow_intro": {
+      "type": "result",
+      "title": "Slow Training Detected",
+      "description": "Your model is taking too long to train.",
+      "solutions": [
+        "Optimize data pipeline",
+        "Reduce feature size"
+      ],
+      "next": "q_slow_cause"
+    },
+
+    "q_slow_cause": {
+      "type": "question",
+      "text": "What might be causing the slowdown?",
+      "options": [
+        { "text": "Large dataset", "next": "r_slow_data" },
+        { "text": "Complex model", "next": "r_slow_model" }
+      ]
+    },
+
+    "r_slow_data": {
+      "type": "result",
+      "title": "Large Dataset Issue",
+      "description": "Training on large data takes time.",
+      "solutions": [
+        "Use sampling",
+        "Use distributed training"
+      ]
+    },
+
+    "r_slow_model": {
+      "type": "result",
+      "title": "Model Complexity Issue",
+      "description": "Model may be too heavy.",
+      "solutions": [
+        "Reduce layers or depth",
+        "Use simpler algorithms"
+      ]
+    },
+
+    // INSTABILITY FLOW
+
+    "r_instability_intro": {
+      "type": "result",
+      "title": "Prediction Instability",
+      "description": "Model outputs vary too much.",
+      "solutions": [
+        "Check data consistency",
+        "Use cross-validation"
+      ],
+      "next": "q_instability_reason"
+    },
+
+    "q_instability_reason": {
+      "type": "question",
+      "text": "What seems inconsistent?",
+      "options": [
+        { "text": "Different results each run", "next": "r_randomness" },
+        { "text": "Highly sensitive to input changes", "next": "r_sensitivity" }
+      ]
+    },
+
+    "r_randomness": {
+      "type": "result",
+      "title": "Randomness Issue",
+      "description": "Model randomness not controlled.",
+      "solutions": [
+        "Set random seed",
+        "Use deterministic settings"
+      ]
+    },
+
+    "r_sensitivity": {
+      "type": "result",
+      "title": "High Sensitivity",
+      "description": "Model reacts strongly to small changes.",
+      "solutions": [
+        "Normalize data",
+        "Use regularization"
+      ]
+    }
+
+  }
+}
