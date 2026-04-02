@@ -465,3 +465,277 @@
 
   }
 }
+
+,
+"q_eval_entry": {
+  "type": "question",
+  "text": "What do you want to evaluate?",
+  "options": [
+    { "text": "Classification model performance", "next": "q_eval_clf_type" },
+    { "text": "Regression model performance", "next": "q_eval_reg_type" },
+    { "text": "Validation strategy", "next": "q_eval_validation" }
+  ]
+},
+
+"q_eval_clf_type": {
+  "type": "question",
+  "text": "What is your dataset type?",
+  "options": [
+    { "text": "Balanced dataset", "next": "r_eval_clf_balanced" },
+    { "text": "Imbalanced dataset", "next": "r_eval_clf_imbalanced" }
+  ]
+},
+
+"r_eval_clf_balanced": {
+  "type": "result",
+  "title": "Balanced Classification Metrics",
+  "description": "Accuracy is useful when classes are balanced.",
+  "solutions": [
+    "Use accuracy",
+    "Check confusion matrix",
+    "Validate using cross-validation"
+  ],
+  "next": "q_eval_threshold"
+},
+
+"r_eval_clf_imbalanced": {
+  "type": "result",
+  "title": "Imbalanced Classification Metrics",
+  "description": "Accuracy can be misleading.",
+  "solutions": [
+    "Use Precision and Recall",
+    "Use F1-score",
+    "Use ROC-AUC"
+  ],
+  "next": "q_eval_threshold"
+},
+
+"q_eval_threshold": {
+  "type": "question",
+  "text": "Do you need threshold tuning?",
+  "options": [
+    { "text": "Yes", "next": "r_eval_threshold_yes" },
+    { "text": "No", "next": "q_opt_entry" }
+  ]
+},
+
+"r_eval_threshold_yes": {
+  "type": "result",
+  "title": "Threshold Optimization",
+  "description": "Adjust classification threshold.",
+  "solutions": [
+    "Tune threshold using ROC curve",
+    "Optimize for business metric",
+    "Test multiple thresholds"
+  ],
+  "next": "q_opt_entry"
+},
+
+"q_eval_reg_type": {
+  "type": "question",
+  "text": "What do you want to measure?",
+  "options": [
+    { "text": "Error magnitude", "next": "r_eval_reg_error" },
+    { "text": "Model fit quality", "next": "r_eval_reg_fit" }
+  ]
+},
+
+"r_eval_reg_error": {
+  "type": "result",
+  "title": "Error Metrics",
+  "description": "Measure prediction error.",
+  "solutions": [
+    "Use MSE",
+    "Use RMSE",
+    "Use MAE"
+  ],
+  "next": "q_eval_reg_issue"
+},
+
+"r_eval_reg_fit": {
+  "type": "result",
+  "title": "Fit Quality",
+  "description": "Measure how well model fits data.",
+  "solutions": [
+    "Use R² score",
+    "Compare residuals",
+    "Check overfitting"
+  ],
+  "next": "q_eval_reg_issue"
+},
+
+"q_eval_reg_issue": {
+  "type": "question",
+  "text": "Are errors consistent?",
+  "options": [
+    { "text": "Yes", "next": "r_eval_reg_good" },
+    { "text": "No", "next": "r_eval_reg_problem" }
+  ]
+},
+
+"r_eval_reg_good": {
+  "type": "result",
+  "title": "Stable Regression Model",
+  "description": "Errors are consistent.",
+  "solutions": [
+    "Model is reliable",
+    "Proceed to optimization"
+  ],
+  "next": "q_opt_entry"
+},
+
+"r_eval_reg_problem": {
+  "type": "result",
+  "title": "Inconsistent Errors",
+  "description": "Model errors vary.",
+  "solutions": [
+    "Check feature scaling",
+    "Inspect outliers",
+    "Try different models"
+  ],
+  "next": "q_opt_entry"
+},
+
+"q_eval_validation": {
+  "type": "question",
+  "text": "What validation method are you using?",
+  "options": [
+    { "text": "Train-test split", "next": "r_eval_split" },
+    { "text": "Cross-validation", "next": "r_eval_cv" }
+  ]
+},
+
+"r_eval_split": {
+  "type": "result",
+  "title": "Basic Validation",
+  "description": "Single split may be unreliable.",
+  "solutions": [
+    "Use cross-validation",
+    "Try multiple splits"
+  ],
+  "next": "q_opt_entry"
+},
+
+"r_eval_cv": {
+  "type": "result",
+  "title": "Cross Validation",
+  "description": "More robust evaluation.",
+  "solutions": [
+    "Use k-fold CV",
+    "Check variance across folds"
+  ],
+  "next": "q_opt_entry"
+},
+
+"q_opt_entry": {
+  "type": "question",
+  "text": "What do you want to improve?",
+  "options": [
+    { "text": "Accuracy", "next": "q_opt_accuracy" },
+    { "text": "Speed", "next": "q_opt_speed" },
+    { "text": "Deployment readiness", "next": "q_deploy_ready" }
+  ]
+},
+
+"q_opt_accuracy": {
+  "type": "question",
+  "text": "How do you want to improve accuracy?",
+  "options": [
+    { "text": "Tune hyperparameters", "next": "r_opt_tuning" },
+    { "text": "Improve features", "next": "r_opt_features" },
+    { "text": "Use ensembles", "next": "r_opt_ensemble" }
+  ]
+},
+
+"r_opt_tuning": {
+  "type": "result",
+  "title": "Hyperparameter Tuning",
+  "description": "Optimize model settings.",
+  "solutions": [
+    "Grid search",
+    "Random search",
+    "Bayesian optimization"
+  ]
+},
+
+"r_opt_features": {
+  "type": "result",
+  "title": "Feature Engineering",
+  "description": "Improve input data.",
+  "solutions": [
+    "Create new features",
+    "Normalize data",
+    "Remove noise"
+  ]
+},
+
+"r_opt_ensemble": {
+  "type": "result",
+  "title": "Ensemble Methods",
+  "description": "Combine models.",
+  "solutions": [
+    "Bagging",
+    "Boosting", 
+    "Stacking"
+  ]
+},
+
+"q_opt_speed": {
+  "type": "question",
+  "text": "What is slowing your model?",
+  "options": [
+    { "text": "Too much data", "next": "r_opt_data" },
+    { "text": "Heavy model", "next": "r_opt_model" }
+  ]
+},
+
+"r_opt_data": {
+  "type": "result",
+  "title": "Large Data Issue",
+  "description": "Dataset is too large.",
+  "solutions": [
+    "Use sampling",
+    "Dimensionality reduction"
+  ]
+},
+
+"r_opt_model": {
+  "type": "result",
+  "title": "Model Complexity",
+  "description": "Model is too heavy.",
+  "solutions": [
+    "Simplify model",
+    "Reduce layers"
+  ]
+},
+
+"q_deploy_ready": {
+  "type": "question",
+  "text": "Are you ready to deploy?",
+  "options": [
+    { "text": "Yes", "next": "r_deploy_yes" },
+    { "text": "No", "next": "r_deploy_no" }
+  ]
+},
+
+"r_deploy_yes": {
+  "type": "result",
+  "title": "Deployment Ready",
+  "description": "Proceed to production.",
+  "solutions": [
+    "Use FastAPI or Flask",
+    "Dockerize model",
+    "Monitor performance"
+  ]
+},
+
+"r_deploy_no": {
+  "type": "result",
+  "title": "Not Ready",
+  "description": "Prepare before deployment.",
+  "solutions": [
+    "Improve evaluation",
+    "Test edge cases",
+    "Stabilize model"
+  ]
+}
