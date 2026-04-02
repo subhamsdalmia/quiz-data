@@ -1,10 +1,9 @@
+```json
 {
   "flows": {
     "ml_debug": { "start": "q_problem" }
   },
-
   "nodes": {
-
     "q_problem": {
       "type": "question",
       "text": "What issue are you facing?",
@@ -15,8 +14,6 @@
         { "text": "Model predictions are inconsistent", "next": "r_instability_intro" }
       ]
     },
-
-    // OVERFITTING FLOW
 
     "r_overfit_intro": {
       "type": "result",
@@ -105,8 +102,6 @@
       ]
     },
 
-    // UNDERFITTING FLOW
-
     "r_underfit_intro": {
       "type": "result",
       "title": "Underfitting Detected",
@@ -148,8 +143,6 @@
       ]
     },
 
-    // SLOW MODEL FLOW
-
     "r_slow_intro": {
       "type": "result",
       "title": "Slow Training Detected",
@@ -190,8 +183,6 @@
       ]
     },
 
-    // INSTABILITY FLOW
-
     "r_instability_intro": {
       "type": "result",
       "title": "Prediction Instability",
@@ -231,6 +222,6 @@
         "Use regularization"
       ]
     }
-
   }
 }
+```
