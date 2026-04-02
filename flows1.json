@@ -2,8 +2,7 @@
   "flows": {
     "ml_debug": { "start": "q_problem" },
     "data_issues": { "start": "q_data_entry" },
-    "model_select": { "start": "q_model_entry" },
-    "deployment": { "start": "q_deploy_issue" }
+    "model_select": { "start": "q_model_entry" }
   },
   "nodes": {
 
@@ -14,8 +13,7 @@
         { "text": "High training accuracy, low test accuracy", "next": "r_overfit_intro" },
         { "text": "Low accuracy on both training and test", "next": "r_underfit_intro" },
         { "text": "Model training is very slow", "next": "r_slow_intro" },
-        { "text": "Model predictions are inconsistent", "next": "r_instability_intro" },
-        { "text": "Model works in training but fails in production", "next": "q_deploy_issue" }
+        { "text": "Model predictions are inconsistent", "next": "r_instability_intro" }
       ]
     },
 
@@ -50,7 +48,7 @@
         "Use early stopping",
         "Reduce layers or neurons"
       ],
-      "next": "q_overfit_feature"
+      "next": "q_overfit_data_size"
     },
 
     "r_overfit_tree": {
@@ -62,7 +60,7 @@
         "Use pruning",
         "Use Random Forest instead"
       ],
-      "next": "q_overfit_feature"
+      "next": "q_overfit_data_size"
     },
 
     "r_overfit_linear": {
@@ -114,7 +112,8 @@
         "Collect more data",
         "Use data augmentation",
         "Use simpler models"
-      ]
+      ],
+      "next": "q_metrics_issue"
     },
 
     "r_overfit_large_data": {
@@ -124,7 +123,8 @@
       "solutions": [
         "Reduce model complexity",
         "Apply stronger regularization"
-      ]
+      ],
+      "next": "q_metrics_issue"
     },
 
     "r_underfit_intro": {
@@ -485,52 +485,6 @@
         "Neural Networks"
       ]
     },
-
-    "q_deploy_issue": {
-      "type": "question",
-      "text": "What happens in production?",
-      "options": [
-        { "text": "Accuracy drops", "next": "r_data_drift" },
-        { "text": "Predictions delayed", "next": "r_latency_issue" },
-        { "text": "Model crashes", "next": "r_deploy_crash" }
-      ]
-    },
-
-    "r_data_drift": {
-      "type": "result",
-      "title": "Data Drift Detected",
-      "description": "Production data distribution differs from training.",
-      "solutions": [
-        "Monitor feature drift",
-        "Retrain model regularly",
-        "Use robust features"
-      ]
-    },
-
-    "r_latency_issue": {
-      "type": "result",
-      "title": "High Latency",
-      "description": "Model inference is too slow.",
-      "solutions": [
-        "Use model compression",
-        "Switch to lighter model",
-        "Use batch predictions"
-      ]
-    },
-
-    "r_deploy_crash": {
-      "type": "result",
-      "title": "Deployment Failure",
-      "description": "Model fails during execution.",
-      "solutions": [
-        "Check dependencies",
-        "Validate input schema",
-        "Add error handling"
-      ]
-    }
-
-  }
-,
 
     "q_metrics_issue": {
       "type": "question",
