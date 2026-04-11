@@ -6,7 +6,7 @@
       "title": "Enterprise Multi-Issue: Slow Apps, VoIP Drops, VPN Issues, Partial DNS Failures",
       "connections": ["lan1","wan1","sec1","voip1","infra1","vpn1","app1"] },
 
-    // ================= LAN (STP + ARP + VLAN) =================
+    
 
     { "id": "lan1","type":"question","title":"Check LAN (CPU / broadcast / VLAN)","connections":["lan2","lan10","lan20"]},
 
@@ -51,8 +51,7 @@
     { "id": "lan22","type":"result","title":"Fix VLAN trunk",
       "connections":[]},
 
-    // ================= WAN (BGP + MPLS + ASYM ROUTING) =================
-
+    
     { "id": "wan1","type":"question","title":"Check WAN/MPLS","connections":["wan2","wan10","wan20"]},
 
     { "id": "wan2","type":"command","title":"traceroute 8.8.8.8",
@@ -90,7 +89,7 @@
     { "id": "wan21","type":"analysis","title":"Return path mismatch",
       "connections":["sec3"]},
 
-    // ================= SECURITY (NAT + IPS + WAF) =================
+    
 
     { "id": "sec1","type":"question","title":"Check Security","connections":["sec2","sec10","sec20"]},
 
@@ -117,7 +116,7 @@
       "output":"Blocking API calls intermittently",
       "connections":["app3"]},
 
-    // ================= VOIP (SIP + RTP + NAT TRAVERSAL) =================
+    
 
     { "id": "voip1","type":"question","title":"Check VoIP","connections":["voip2","voip10","voip20"]},
 
@@ -140,7 +139,7 @@
       "output":"NAT mismatch in SDP",
       "connections":["sec5"]},
 
-    // ================= INFRA (DNS + DHCP) =================
+    
 
     { "id": "infra1","type":"question","title":"Check DNS/DHCP","connections":["infra2","infra10","infra20"]},
 
@@ -171,7 +170,7 @@
     { "id": "infra20","type":"penalty","title":"Ignored DNS",
       "connections":["app1"]},
 
-    // ================= APPLICATION =================
+    
 
     { "id": "app1","type":"question","title":"Check Application","connections":["app2","app10"]},
 
@@ -192,7 +191,7 @@
       "output":"Misconfigured path",
       "connections":["app5"]},
 
-    // ================= VPN =================
+  
 
     { "id": "vpn1","type":"question","title":"Check VPN","connections":["vpn2","vpn10"]},
 
@@ -209,7 +208,7 @@
       "output":"Encap 1000, Decap 0",
       "connections":["vpn3"]},
 
-    // ================= EXTRA TRAPS =================
+    
 
     { "id": "trap1","type":"penalty","title":"Applied QoS first",
       "penalty":"Masked root cause",
