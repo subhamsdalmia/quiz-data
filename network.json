@@ -1,465 +1,223 @@
 {
-  "start": "n1",
+  "start": "s1",
   "nodes": [
 
-    {
-      "id": "n1",
-      "layer": "User",
-      "device": "Client PC",
-      "issue": "User cannot access internet",
-      "commands": [
-        { "cmd": "ipconfig", "output": "IP: 169.254.10.5" },
-        { "cmd": "ping 8.8.8.8", "output": "Request timed out" },
-        { "cmd": "tracert 8.8.8.8", "output": "Stops at gateway" }
-      ],
-      "analysis": "APIPA → DHCP failure OR upstream issue",
-      "next": ["n10", "n50", "n20"]
-    },
+    { "id": "s1", "type": "scenario",
+      "title": "Enterprise Multi-Issue: Slow Apps, VoIP Drops, VPN Issues, Partial DNS Failures",
+      "connections": ["lan1","wan1","sec1","voip1","infra1","vpn1","app1"] },
 
-    // ================= LAN =================
+    // ================= LAN (STP + ARP + VLAN) =================
 
-    {
-      "id": "n10",
-      "layer": "LAN",
-      "device": "Access Switch",
-      "issue": "Check port",
-      "commands": [
-        { "cmd": "show interface status", "output": "Fa0/1 notconnect" },
-        { "cmd": "show interface fa0/1", "output": "line protocol down" },
-        { "cmd": "show log", "output": "Link flapping detected" }
-      ],
-      "analysis": "Physical issue or unstable link",
-      "next": ["n11"]
-    },
+    { "id": "lan1","type":"question","title":"Check LAN (CPU / broadcast / VLAN)","connections":["lan2","lan10","lan20"]},
 
-    {
-      "id": "n11",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "Fix physical",
-      "commands": [
-        { "cmd": "Replace cable", "output": "Link up" },
-        { "cmd": "show interface status", "output": "connected" }
-      ],
-      "analysis": "Layer 1 restored",
-      "next": ["n1"]
-    },
+    { "id": "lan2","type":"command","title":"show spanning-tree",
+      "output":"Topology changes: 1500\nRoot changing",
+      "connections":["lan3"]},
 
-    {
-      "id": "n12",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "VLAN issue",
-      "commands": [
-        { "cmd": "show vlan brief", "output": "Port VLAN 20" },
-        { "cmd": "show interface switchport", "output": "Access VLAN 20" }
-      ],
-      "analysis": "Wrong VLAN assignment",
-      "next": ["n13"]
-    },
+    { "id": "lan3","type":"analysis","title":"STP instability",
+      "connections":["lan4","lan5"]},
 
-    {
-      "id": "n13",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "Fix VLAN",
-      "commands": [
-        { "cmd": "switchport access vlan 10", "output": "Configured" },
-        { "cmd": "show vlan brief", "output": "Now VLAN 10" }
-      ],
-      "analysis": "Correct broadcast domain",
-      "next": ["n1"]
-    },
+    { "id": "lan4","type":"command","title":"show etherchannel summary",
+      "output":"Po1 SU\nGi1/0/1(P) Gi1/0/2(I)",
+      "connections":["lan6"]},
 
-    {
-      "id": "n14",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "STP loop",
-      "commands": [
-        { "cmd": "show spanning-tree", "output": "Topology changes high" },
-        { "cmd": "show mac address-table", "output": "MAC flapping" },
-        { "cmd": "show cpu", "output": "High CPU 90%" }
-      ],
-      "analysis": "Broadcast storm due to loop",
-      "next": ["n15"]
-    },
+    { "id": "lan5","type":"command","title":"show mac address-table",
+      "output":"MAC flapping detected",
+      "connections":["lan6"]},
 
-    {
-      "id": "n15",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "Fix STP",
-      "commands": [
-        { "cmd": "spanning-tree bpduguard enable", "output": "Enabled" },
-        { "cmd": "spanning-tree portfast", "output": "Enabled" },
-        { "cmd": "show spanning-tree", "output": "Stable" }
-      ],
-      "analysis": "Loop contained",
-      "next": ["n1"]
-    },
+    { "id": "lan6","type":"analysis","title":"EtherChannel mismatch → loop",
+      "connections":["lan7"]},
 
-    {
-      "id": "n16",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "EtherChannel mismatch",
-      "commands": [
-        { "cmd": "show etherchannel summary", "output": "P not in bundle" },
-        { "cmd": "show run interface", "output": "Mismatch mode" }
-      ],
-      "analysis": "Config mismatch across links",
-      "next": ["n17"]
-    },
+    { "id": "lan7","type":"result","title":"Fix EtherChannel + BPDU guard",
+      "affects":["wan1","voip1","infra1"],"connections":[]},
 
-    {
-      "id": "n17",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "Fix EtherChannel",
-      "commands": [
-        { "cmd": "channel-group 1 mode active", "output": "Bundled" },
-        { "cmd": "show etherchannel summary", "output": "SU" }
-      ],
-      "analysis": "Link aggregation working",
-      "next": ["n20"]
-    },
+    { "id": "lan10","type":"command","title":"show arp",
+      "output":"Duplicate IP detected",
+      "connections":["lan11"]},
 
-    {
-      "id": "n18",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "ARP problem",
-      "commands": [
-        { "cmd": "show arp", "output": "Incomplete entries" },
-        { "cmd": "debug arp", "output": "No reply" }
-      ],
-      "analysis": "ARP resolution failure",
-      "next": ["n19", "n40"]
-    },
+    { "id": "lan11","type":"analysis","title":"ARP conflict",
+      "connections":["lan12","infra3"]},
 
-    {
-      "id": "n19",
-      "layer": "LAN",
-      "device": "Switch",
-      "issue": "Fix ARP",
-      "commands": [
-        { "cmd": "clear arp-cache", "output": "Cleared" },
-        { "cmd": "show arp", "output": "Resolved" }
-      ],
-      "analysis": "MAC learned again",
-      "next": ["n1"]
-    },
+    { "id": "lan12","type":"result","title":"Fix duplicate IP",
+      "connections":[]},
 
-    // ================= ROUTING =================
+    { "id": "lan20","type":"command","title":"show vlan",
+      "output":"VLAN mismatch trunk",
+      "connections":["lan21"]},
 
-    {
-      "id": "n20",
-      "layer": "Routing",
-      "device": "Router",
-      "issue": "Routing failure",
-      "commands": [
-        { "cmd": "show ip route", "output": "No default route" },
-        { "cmd": "show ip cef", "output": "No adjacency" }
-      ],
-      "analysis": "No path to internet",
-      "next": ["n21", "n24"]
-    },
+    { "id": "lan21","type":"analysis","title":"Trunk misconfig",
+      "connections":["lan22"]},
 
-    {
-      "id": "n21",
-      "layer": "Routing",
-      "device": "Router",
-      "issue": "OSPF issue",
-      "commands": [
-        { "cmd": "show ip ospf neighbor", "output": "Down" },
-        { "cmd": "show ip ospf interface", "output": "Area mismatch" }
-      ],
-      "analysis": "OSPF adjacency not forming",
-      "next": ["n22", "n23"]
-    },
+    { "id": "lan22","type":"result","title":"Fix VLAN trunk",
+      "connections":[]},
 
-    {
-      "id": "n22",
-      "layer": "Routing",
-      "device": "Router",
-      "issue": "Interface down",
-      "commands": [
-        { "cmd": "show ip interface brief", "output": "down/down" },
-        { "cmd": "show controllers", "output": "No signal" }
-      ],
-      "analysis": "Physical/link issue",
-      "next": ["n11"]
-    },
+    // ================= WAN (BGP + MPLS + ASYM ROUTING) =================
 
-    {
-      "id": "n23",
-      "layer": "Routing",
-      "device": "Router",
-      "issue": "Fix OSPF",
-      "commands": [
-        { "cmd": "network 10.0.0.0 0.0.0.255 area 0", "output": "Configured" },
-        { "cmd": "show ip ospf neighbor", "output": "FULL" }
-      ],
-      "analysis": "OSPF restored",
-      "next": ["n20"]
-    },
+    { "id": "wan1","type":"question","title":"Check WAN/MPLS","connections":["wan2","wan10","wan20"]},
 
-    {
-      "id": "n24",
-      "layer": "Routing",
-      "device": "Router",
-      "issue": "BGP issue",
-      "commands": [
-        { "cmd": "show ip bgp summary", "output": "Idle" },
-        { "cmd": "debug ip bgp", "output": "No TCP session" }
-      ],
-      "analysis": "Peer not reachable",
-      "next": ["n25", "n40"]
-    },
+    { "id": "wan2","type":"command","title":"traceroute 8.8.8.8",
+      "output":"Path changes\nLatency spike",
+      "connections":["wan3"]},
 
-    {
-      "id": "n25",
-      "layer": "Routing",
-      "device": "Router",
-      "issue": "Fix BGP",
-      "commands": [
-        { "cmd": "neighbor x.x.x.x remote-as 65001", "output": "Configured" },
-        { "cmd": "show ip bgp summary", "output": "Established" }
-      ],
-      "analysis": "BGP up",
-      "next": ["n20"]
-    },
+    { "id": "wan3","type":"analysis","title":"MPLS instability",
+      "connections":["wan4","wan5"]},
 
-    {
-      "id": "n26",
-      "layer": "WAN",
-      "device": "PE Router",
-      "issue": "MPLS issue",
-      "commands": [
-        { "cmd": "show mpls forwarding-table", "output": "No label" },
-        { "cmd": "show ldp neighbor", "output": "None" },
-        { "cmd": "show ip route vrf", "output": "Missing routes" }
-      ],
-      "analysis": "Label distribution failure",
-      "next": ["n24"]
-    },
+    { "id": "wan4","type":"command","title":"show ip route",
+      "output":"OSPF preferred over MPLS",
+      "connections":["wan6"]},
 
-    // ================= SECURITY =================
+    { "id": "wan5","type":"command","title":"show bgp summary",
+      "output":"Neighbor flapping",
+      "connections":["wan6"]},
 
-    {
-      "id": "n40",
-      "layer": "Security",
-      "device": "Firewall",
-      "issue": "Traffic blocked",
-      "commands": [
-        { "cmd": "show access-list", "output": "deny ip any any hits" },
-        { "cmd": "show conn", "output": "No sessions" }
-      ],
-      "analysis": "Firewall dropping packets",
-      "next": ["n41"]
-    },
+    { "id": "wan6","type":"analysis","title":"Routing conflict",
+      "connections":["wan7","wan8"]},
 
-    {
-      "id": "n41",
-      "layer": "Security",
-      "device": "Firewall",
-      "issue": "Fix ACL",
-      "commands": [
-        { "cmd": "permit ip any any", "output": "Configured" },
-        { "cmd": "show access-list", "output": "Permit hits increasing" }
-      ],
-      "analysis": "Traffic allowed",
-      "next": ["n1"]
-    },
+    { "id": "wan7","type":"result","title":"Fix OSPF cost","connections":[]},
+    { "id": "wan8","type":"result","title":"Fix BGP stability","connections":[]},
 
-    {
-      "id": "n42",
-      "layer": "Security",
-      "device": "Firewall",
-      "issue": "NAT issue",
-      "commands": [
-        { "cmd": "show nat translations", "output": "Empty" },
-        { "cmd": "show xlate", "output": "No entries" }
-      ],
-      "analysis": "NAT not happening",
-      "next": ["n43"]
-    },
+    { "id": "wan10","type":"command","title":"show mpls ldp neighbor",
+      "output":"Session down intermittently",
+      "connections":["wan11"]},
 
-    {
-      "id": "n43",
-      "layer": "Security",
-      "device": "Firewall",
-      "issue": "Fix NAT",
-      "commands": [
-        { "cmd": "ip nat inside source list 1 interface outside overload", "output": "Configured" },
-        { "cmd": "show nat translations", "output": "Entries seen" }
-      ],
-      "analysis": "PAT working",
-      "next": ["n1"]
-    },
+    { "id": "wan11","type":"analysis","title":"MPLS LDP flap",
+      "connections":["wan8"]},
 
-    {
-      "id": "n44",
-      "layer": "Security",
-      "device": "VPN Gateway",
-      "issue": "VPN tunnel down",
-      "commands": [
-        { "cmd": "show crypto isakmp sa", "output": "No SA" },
-        { "cmd": "show crypto ipsec sa", "output": "No packets" }
-      ],
-      "analysis": "Tunnel not established",
-      "next": ["n45"]
-    },
+    { "id": "wan20","type":"command","title":"show ip cef",
+      "output":"Asymmetric routing detected",
+      "connections":["wan21"]},
 
-    {
-      "id": "n45",
-      "layer": "Security",
-      "device": "VPN Gateway",
-      "issue": "Fix VPN",
-      "commands": [
-        { "cmd": "crypto isakmp key cisco address x.x.x.x", "output": "Configured" },
-        { "cmd": "show crypto isakmp sa", "output": "QM_IDLE" }
-      ],
-      "analysis": "Tunnel up",
-      "next": ["n20"]
-    },
+    { "id": "wan21","type":"analysis","title":"Return path mismatch",
+      "connections":["sec3"]},
 
-    // ================= INFRA =================
+    // ================= SECURITY (NAT + IPS + WAF) =================
 
-    {
-      "id": "n50",
-      "layer": "Infra",
-      "device": "Client",
-      "issue": "DNS failure",
-      "commands": [
-        { "cmd": "nslookup google.com", "output": "Server failed" },
-        { "cmd": "ping dns-server", "output": "Unreachable" }
-      ],
-      "analysis": "DNS unreachable",
-      "next": ["n51"]
-    },
+    { "id": "sec1","type":"question","title":"Check Security","connections":["sec2","sec10","sec20"]},
 
-    {
-      "id": "n51",
-      "layer": "Infra",
-      "device": "Server",
-      "issue": "DNS down",
-      "commands": [
-        { "cmd": "systemctl status named", "output": "Stopped" },
-        { "cmd": "netstat -an | grep 53", "output": "Not listening" }
-      ],
-      "analysis": "DNS service down",
-      "next": ["n52"]
-    },
+    { "id": "sec2","type":"command","title":"show nat translations",
+      "output":"Pool exhausted for some users",
+      "connections":["sec3"]},
 
-    {
-      "id": "n52",
-      "layer": "Infra",
-      "device": "Server",
-      "issue": "Fix DNS",
-      "commands": [
-        { "cmd": "systemctl start named", "output": "Running" },
-        { "cmd": "netstat -an | grep 53", "output": "Listening" }
-      ],
-      "analysis": "DNS restored",
-      "next": ["n1"]
-    },
+    { "id": "sec3","type":"analysis","title":"Partial NAT failure",
+      "connections":["sec4","sec5","vpn2"]},
 
-    {
-      "id": "n53",
-      "layer": "Infra",
-      "device": "DHCP",
-      "issue": "DHCP failure",
-      "commands": [
-        { "cmd": "show ip dhcp binding", "output": "Empty" },
-        { "cmd": "debug dhcp", "output": "No DISCOVER" }
-      ],
-      "analysis": "Requests not reaching server",
-      "next": ["n14", "n52"]
-    },
+    { "id": "sec4","type":"result","title":"Increase NAT pool","connections":[]},
+    { "id": "sec5","type":"result","title":"Fix PAT rules","connections":[]},
 
-    // ================= VOIP =================
+    { "id": "sec10","type":"command","title":"show ips logs",
+      "output":"Legit traffic dropped",
+      "connections":["sec11"]},
 
-    {
-      "id": "n60",
-      "layer": "VoIP",
-      "device": "SBC",
-      "issue": "Call drops",
-      "commands": [
-        { "cmd": "show sip session", "output": "Disconnects" },
-        { "cmd": "show rtp stats", "output": "Packet loss 20%" }
-      ],
-      "analysis": "Poor voice quality",
-      "next": ["n61", "n42"]
-    },
+    { "id": "sec11","type":"analysis","title":"IPS false positive",
+      "connections":["sec12"]},
 
-    {
-      "id": "n61",
-      "layer": "VoIP",
-      "device": "Router",
-      "issue": "QoS issue",
-      "commands": [
-        { "cmd": "show policy-map", "output": "No priority queue" },
-        { "cmd": "show interface", "output": "Drops increasing" }
-      ],
-      "analysis": "Voice not prioritized",
-      "next": ["n62"]
-    },
+    { "id": "sec12","type":"result","title":"Tune IPS policy","connections":[]},
 
-    {
-      "id": "n62",
-      "layer": "VoIP",
-      "device": "Router",
-      "issue": "Fix QoS",
-      "commands": [
-        { "cmd": "priority percent 30", "output": "Configured" },
-        { "cmd": "show policy-map", "output": "Voice queue active" }
-      ],
-      "analysis": "Voice stable",
-      "next": ["n1"]
-    },
+    { "id": "sec20","type":"command","title":"show waf logs",
+      "output":"Blocking API calls intermittently",
+      "connections":["app3"]},
 
-    // ================= APP =================
+    // ================= VOIP (SIP + RTP + NAT TRAVERSAL) =================
 
-    {
-      "id": "n70",
-      "layer": "App",
-      "device": "Load Balancer",
-      "issue": "App not loading",
-      "commands": [
-        { "cmd": "show pool", "output": "All nodes down" },
-        { "cmd": "show virtual-server", "output": "Active but no backend" }
-      ],
-      "analysis": "Backend failure",
-      "next": ["n71"]
-    },
+    { "id": "voip1","type":"question","title":"Check VoIP","connections":["voip2","voip10","voip20"]},
 
-    {
-      "id": "n71",
-      "layer": "App",
-      "device": "Server",
-      "issue": "Backend down",
-      "commands": [
-        { "cmd": "systemctl status app", "output": "Stopped" },
-        { "cmd": "netstat -an | grep 80", "output": "No listener" }
-      ],
-      "analysis": "Service not running",
-      "next": ["n72"]
-    },
+    { "id": "voip2","type":"command","title":"show voip rtp connections",
+      "output":"High jitter",
+      "connections":["voip3"]},
 
-    {
-      "id": "n72",
-      "layer": "App",
-      "device": "Server",
-      "issue": "Fix app",
-      "commands": [
-        { "cmd": "systemctl start app", "output": "Running" },
-        { "cmd": "curl localhost", "output": "200 OK" }
-      ],
-      "analysis": "Service restored",
-      "next": ["n70"]
-    }
+    { "id": "voip3","type":"analysis","title":"QoS OR congestion",
+      "connections":["voip4","wan1"]},
+
+    { "id": "voip4","type":"result","title":"Apply QoS",
+      "penalty":"Symptom fix only",
+      "connections":[]},
+
+    { "id": "voip10","type":"command","title":"show sip-ua status",
+      "output":"Fails for some users",
+      "connections":["sec3"]},
+
+    { "id": "voip20","type":"command","title":"debug ccsip messages",
+      "output":"NAT mismatch in SDP",
+      "connections":["sec5"]},
+
+    // ================= INFRA (DNS + DHCP) =================
+
+    { "id": "infra1","type":"question","title":"Check DNS/DHCP","connections":["infra2","infra10","infra20"]},
+
+    { "id": "infra2","type":"command","title":"nslookup app",
+      "output":"Sometimes works",
+      "connections":["infra3"]},
+
+    { "id": "infra3","type":"analysis","title":"DNS intermittent",
+      "connections":["infra4","infra5"]},
+
+    { "id": "infra4","type":"command","title":"show ip dhcp binding",
+      "output":"IP conflict",
+      "connections":["infra6"]},
+
+    { "id": "infra5","type":"command","title":"ping dns",
+      "output":"Loss 40%",
+      "connections":["lan3"]},
+
+    { "id": "infra6","type":"result","title":"Fix DHCP conflict","connections":[]},
+
+    { "id": "infra10","type":"command","title":"show dns cache",
+      "output":"Old cached entries",
+      "connections":["infra11"]},
+
+    { "id": "infra11","type":"analysis","title":"Cache masking issue",
+      "connections":["infra3"]},
+
+    { "id": "infra20","type":"penalty","title":"Ignored DNS",
+      "connections":["app1"]},
+
+    // ================= APPLICATION =================
+
+    { "id": "app1","type":"question","title":"Check Application","connections":["app2","app10"]},
+
+    { "id": "app2","type":"command","title":"curl app",
+      "output":"503 sometimes",
+      "connections":["app3"]},
+
+    { "id": "app3","type":"analysis","title":"LB issue",
+      "connections":["app4"]},
+
+    { "id": "app4","type":"command","title":"show lb backend",
+      "output":"1 server down, 1 slow",
+      "connections":["app5"]},
+
+    { "id": "app5","type":"result","title":"Fix backend servers","connections":[]},
+
+    { "id": "app10","type":"command","title":"check health probe",
+      "output":"Misconfigured path",
+      "connections":["app5"]},
+
+    // ================= VPN =================
+
+    { "id": "vpn1","type":"question","title":"Check VPN","connections":["vpn2","vpn10"]},
+
+    { "id": "vpn2","type":"command","title":"show vpn status",
+      "output":"Tunnel UP, no traffic",
+      "connections":["vpn3"]},
+
+    { "id": "vpn3","type":"analysis","title":"Interesting traffic mismatch",
+      "connections":["sec3","vpn4"]},
+
+    { "id": "vpn4","type":"result","title":"Fix crypto ACL","connections":[]},
+
+    { "id": "vpn10","type":"command","title":"show ipsec sa",
+      "output":"Encap 1000, Decap 0",
+      "connections":["vpn3"]},
+
+    // ================= EXTRA TRAPS =================
+
+    { "id": "trap1","type":"penalty","title":"Applied QoS first",
+      "penalty":"Masked root cause",
+      "connections":["lan1"]},
+
+    { "id": "trap2","type":"penalty","title":"Restarted DNS only",
+      "penalty":"Issue returns",
+      "connections":["infra1"]}
 
   ]
 }
