@@ -1,0 +1,465 @@
+{
+  "start": "n1",
+  "nodes": [
+
+    {
+      "id": "n1",
+      "layer": "User",
+      "device": "Client PC",
+      "issue": "User cannot access internet",
+      "commands": [
+        { "cmd": "ipconfig", "output": "IP: 169.254.10.5" },
+        { "cmd": "ping 8.8.8.8", "output": "Request timed out" },
+        { "cmd": "tracert 8.8.8.8", "output": "Stops at gateway" }
+      ],
+      "analysis": "APIPA → DHCP failure OR upstream issue",
+      "next": ["n10", "n50", "n20"]
+    },
+
+    // ================= LAN =================
+
+    {
+      "id": "n10",
+      "layer": "LAN",
+      "device": "Access Switch",
+      "issue": "Check port",
+      "commands": [
+        { "cmd": "show interface status", "output": "Fa0/1 notconnect" },
+        { "cmd": "show interface fa0/1", "output": "line protocol down" },
+        { "cmd": "show log", "output": "Link flapping detected" }
+      ],
+      "analysis": "Physical issue or unstable link",
+      "next": ["n11"]
+    },
+
+    {
+      "id": "n11",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "Fix physical",
+      "commands": [
+        { "cmd": "Replace cable", "output": "Link up" },
+        { "cmd": "show interface status", "output": "connected" }
+      ],
+      "analysis": "Layer 1 restored",
+      "next": ["n1"]
+    },
+
+    {
+      "id": "n12",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "VLAN issue",
+      "commands": [
+        { "cmd": "show vlan brief", "output": "Port VLAN 20" },
+        { "cmd": "show interface switchport", "output": "Access VLAN 20" }
+      ],
+      "analysis": "Wrong VLAN assignment",
+      "next": ["n13"]
+    },
+
+    {
+      "id": "n13",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "Fix VLAN",
+      "commands": [
+        { "cmd": "switchport access vlan 10", "output": "Configured" },
+        { "cmd": "show vlan brief", "output": "Now VLAN 10" }
+      ],
+      "analysis": "Correct broadcast domain",
+      "next": ["n1"]
+    },
+
+    {
+      "id": "n14",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "STP loop",
+      "commands": [
+        { "cmd": "show spanning-tree", "output": "Topology changes high" },
+        { "cmd": "show mac address-table", "output": "MAC flapping" },
+        { "cmd": "show cpu", "output": "High CPU 90%" }
+      ],
+      "analysis": "Broadcast storm due to loop",
+      "next": ["n15"]
+    },
+
+    {
+      "id": "n15",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "Fix STP",
+      "commands": [
+        { "cmd": "spanning-tree bpduguard enable", "output": "Enabled" },
+        { "cmd": "spanning-tree portfast", "output": "Enabled" },
+        { "cmd": "show spanning-tree", "output": "Stable" }
+      ],
+      "analysis": "Loop contained",
+      "next": ["n1"]
+    },
+
+    {
+      "id": "n16",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "EtherChannel mismatch",
+      "commands": [
+        { "cmd": "show etherchannel summary", "output": "P not in bundle" },
+        { "cmd": "show run interface", "output": "Mismatch mode" }
+      ],
+      "analysis": "Config mismatch across links",
+      "next": ["n17"]
+    },
+
+    {
+      "id": "n17",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "Fix EtherChannel",
+      "commands": [
+        { "cmd": "channel-group 1 mode active", "output": "Bundled" },
+        { "cmd": "show etherchannel summary", "output": "SU" }
+      ],
+      "analysis": "Link aggregation working",
+      "next": ["n20"]
+    },
+
+    {
+      "id": "n18",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "ARP problem",
+      "commands": [
+        { "cmd": "show arp", "output": "Incomplete entries" },
+        { "cmd": "debug arp", "output": "No reply" }
+      ],
+      "analysis": "ARP resolution failure",
+      "next": ["n19", "n40"]
+    },
+
+    {
+      "id": "n19",
+      "layer": "LAN",
+      "device": "Switch",
+      "issue": "Fix ARP",
+      "commands": [
+        { "cmd": "clear arp-cache", "output": "Cleared" },
+        { "cmd": "show arp", "output": "Resolved" }
+      ],
+      "analysis": "MAC learned again",
+      "next": ["n1"]
+    },
+
+    // ================= ROUTING =================
+
+    {
+      "id": "n20",
+      "layer": "Routing",
+      "device": "Router",
+      "issue": "Routing failure",
+      "commands": [
+        { "cmd": "show ip route", "output": "No default route" },
+        { "cmd": "show ip cef", "output": "No adjacency" }
+      ],
+      "analysis": "No path to internet",
+      "next": ["n21", "n24"]
+    },
+
+    {
+      "id": "n21",
+      "layer": "Routing",
+      "device": "Router",
+      "issue": "OSPF issue",
+      "commands": [
+        { "cmd": "show ip ospf neighbor", "output": "Down" },
+        { "cmd": "show ip ospf interface", "output": "Area mismatch" }
+      ],
+      "analysis": "OSPF adjacency not forming",
+      "next": ["n22", "n23"]
+    },
+
+    {
+      "id": "n22",
+      "layer": "Routing",
+      "device": "Router",
+      "issue": "Interface down",
+      "commands": [
+        { "cmd": "show ip interface brief", "output": "down/down" },
+        { "cmd": "show controllers", "output": "No signal" }
+      ],
+      "analysis": "Physical/link issue",
+      "next": ["n11"]
+    },
+
+    {
+      "id": "n23",
+      "layer": "Routing",
+      "device": "Router",
+      "issue": "Fix OSPF",
+      "commands": [
+        { "cmd": "network 10.0.0.0 0.0.0.255 area 0", "output": "Configured" },
+        { "cmd": "show ip ospf neighbor", "output": "FULL" }
+      ],
+      "analysis": "OSPF restored",
+      "next": ["n20"]
+    },
+
+    {
+      "id": "n24",
+      "layer": "Routing",
+      "device": "Router",
+      "issue": "BGP issue",
+      "commands": [
+        { "cmd": "show ip bgp summary", "output": "Idle" },
+        { "cmd": "debug ip bgp", "output": "No TCP session" }
+      ],
+      "analysis": "Peer not reachable",
+      "next": ["n25", "n40"]
+    },
+
+    {
+      "id": "n25",
+      "layer": "Routing",
+      "device": "Router",
+      "issue": "Fix BGP",
+      "commands": [
+        { "cmd": "neighbor x.x.x.x remote-as 65001", "output": "Configured" },
+        { "cmd": "show ip bgp summary", "output": "Established" }
+      ],
+      "analysis": "BGP up",
+      "next": ["n20"]
+    },
+
+    {
+      "id": "n26",
+      "layer": "WAN",
+      "device": "PE Router",
+      "issue": "MPLS issue",
+      "commands": [
+        { "cmd": "show mpls forwarding-table", "output": "No label" },
+        { "cmd": "show ldp neighbor", "output": "None" },
+        { "cmd": "show ip route vrf", "output": "Missing routes" }
+      ],
+      "analysis": "Label distribution failure",
+      "next": ["n24"]
+    },
+
+    // ================= SECURITY =================
+
+    {
+      "id": "n40",
+      "layer": "Security",
+      "device": "Firewall",
+      "issue": "Traffic blocked",
+      "commands": [
+        { "cmd": "show access-list", "output": "deny ip any any hits" },
+        { "cmd": "show conn", "output": "No sessions" }
+      ],
+      "analysis": "Firewall dropping packets",
+      "next": ["n41"]
+    },
+
+    {
+      "id": "n41",
+      "layer": "Security",
+      "device": "Firewall",
+      "issue": "Fix ACL",
+      "commands": [
+        { "cmd": "permit ip any any", "output": "Configured" },
+        { "cmd": "show access-list", "output": "Permit hits increasing" }
+      ],
+      "analysis": "Traffic allowed",
+      "next": ["n1"]
+    },
+
+    {
+      "id": "n42",
+      "layer": "Security",
+      "device": "Firewall",
+      "issue": "NAT issue",
+      "commands": [
+        { "cmd": "show nat translations", "output": "Empty" },
+        { "cmd": "show xlate", "output": "No entries" }
+      ],
+      "analysis": "NAT not happening",
+      "next": ["n43"]
+    },
+
+    {
+      "id": "n43",
+      "layer": "Security",
+      "device": "Firewall",
+      "issue": "Fix NAT",
+      "commands": [
+        { "cmd": "ip nat inside source list 1 interface outside overload", "output": "Configured" },
+        { "cmd": "show nat translations", "output": "Entries seen" }
+      ],
+      "analysis": "PAT working",
+      "next": ["n1"]
+    },
+
+    {
+      "id": "n44",
+      "layer": "Security",
+      "device": "VPN Gateway",
+      "issue": "VPN tunnel down",
+      "commands": [
+        { "cmd": "show crypto isakmp sa", "output": "No SA" },
+        { "cmd": "show crypto ipsec sa", "output": "No packets" }
+      ],
+      "analysis": "Tunnel not established",
+      "next": ["n45"]
+    },
+
+    {
+      "id": "n45",
+      "layer": "Security",
+      "device": "VPN Gateway",
+      "issue": "Fix VPN",
+      "commands": [
+        { "cmd": "crypto isakmp key cisco address x.x.x.x", "output": "Configured" },
+        { "cmd": "show crypto isakmp sa", "output": "QM_IDLE" }
+      ],
+      "analysis": "Tunnel up",
+      "next": ["n20"]
+    },
+
+    // ================= INFRA =================
+
+    {
+      "id": "n50",
+      "layer": "Infra",
+      "device": "Client",
+      "issue": "DNS failure",
+      "commands": [
+        { "cmd": "nslookup google.com", "output": "Server failed" },
+        { "cmd": "ping dns-server", "output": "Unreachable" }
+      ],
+      "analysis": "DNS unreachable",
+      "next": ["n51"]
+    },
+
+    {
+      "id": "n51",
+      "layer": "Infra",
+      "device": "Server",
+      "issue": "DNS down",
+      "commands": [
+        { "cmd": "systemctl status named", "output": "Stopped" },
+        { "cmd": "netstat -an | grep 53", "output": "Not listening" }
+      ],
+      "analysis": "DNS service down",
+      "next": ["n52"]
+    },
+
+    {
+      "id": "n52",
+      "layer": "Infra",
+      "device": "Server",
+      "issue": "Fix DNS",
+      "commands": [
+        { "cmd": "systemctl start named", "output": "Running" },
+        { "cmd": "netstat -an | grep 53", "output": "Listening" }
+      ],
+      "analysis": "DNS restored",
+      "next": ["n1"]
+    },
+
+    {
+      "id": "n53",
+      "layer": "Infra",
+      "device": "DHCP",
+      "issue": "DHCP failure",
+      "commands": [
+        { "cmd": "show ip dhcp binding", "output": "Empty" },
+        { "cmd": "debug dhcp", "output": "No DISCOVER" }
+      ],
+      "analysis": "Requests not reaching server",
+      "next": ["n14", "n52"]
+    },
+
+    // ================= VOIP =================
+
+    {
+      "id": "n60",
+      "layer": "VoIP",
+      "device": "SBC",
+      "issue": "Call drops",
+      "commands": [
+        { "cmd": "show sip session", "output": "Disconnects" },
+        { "cmd": "show rtp stats", "output": "Packet loss 20%" }
+      ],
+      "analysis": "Poor voice quality",
+      "next": ["n61", "n42"]
+    },
+
+    {
+      "id": "n61",
+      "layer": "VoIP",
+      "device": "Router",
+      "issue": "QoS issue",
+      "commands": [
+        { "cmd": "show policy-map", "output": "No priority queue" },
+        { "cmd": "show interface", "output": "Drops increasing" }
+      ],
+      "analysis": "Voice not prioritized",
+      "next": ["n62"]
+    },
+
+    {
+      "id": "n62",
+      "layer": "VoIP",
+      "device": "Router",
+      "issue": "Fix QoS",
+      "commands": [
+        { "cmd": "priority percent 30", "output": "Configured" },
+        { "cmd": "show policy-map", "output": "Voice queue active" }
+      ],
+      "analysis": "Voice stable",
+      "next": ["n1"]
+    },
+
+    // ================= APP =================
+
+    {
+      "id": "n70",
+      "layer": "App",
+      "device": "Load Balancer",
+      "issue": "App not loading",
+      "commands": [
+        { "cmd": "show pool", "output": "All nodes down" },
+        { "cmd": "show virtual-server", "output": "Active but no backend" }
+      ],
+      "analysis": "Backend failure",
+      "next": ["n71"]
+    },
+
+    {
+      "id": "n71",
+      "layer": "App",
+      "device": "Server",
+      "issue": "Backend down",
+      "commands": [
+        { "cmd": "systemctl status app", "output": "Stopped" },
+        { "cmd": "netstat -an | grep 80", "output": "No listener" }
+      ],
+      "analysis": "Service not running",
+      "next": ["n72"]
+    },
+
+    {
+      "id": "n72",
+      "layer": "App",
+      "device": "Server",
+      "issue": "Fix app",
+      "commands": [
+        { "cmd": "systemctl start app", "output": "Running" },
+        { "cmd": "curl localhost", "output": "200 OK" }
+      ],
+      "analysis": "Service restored",
+      "next": ["n70"]
+    }
+
+  ]
+}
