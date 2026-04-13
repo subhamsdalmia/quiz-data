@@ -1,0 +1,1599 @@
+[
+    {
+        "title": "mention-network-bot",
+        "problem": "🤖 Automate your Mention Network experience with a high-performance bot that generates context-aware conversations and optimizes point farming efficiency.",
+        "idea": "Build a simplified version of 'mention-network-bot' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/dark12502/mention-network-bot",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-automation-scripts",
+        "problem": "📂 Automate key tasks with 10 practical Python scripts, streamlining operations like data collection, backups, and email communication efficiently.",
+        "idea": "Build a simplified version of 'python-automation-scripts' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/pruthviraj4912/python-automation-scripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "LinkedIn-Skill-Endorser",
+        "problem": "🤖 Automate skill endorsements on LinkedIn with this JavaScript tool, designed for browser use while avoiding bot detection.",
+        "idea": "Build a simplified version of 'LinkedIn-Skill-Endorser' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/mwanzia-kathenge/LinkedIn-Skill-Endorser",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "plume-network-season-2",
+        "problem": "🤖 Automate trading on the Plume network with a bot that supports token swapping, wrapping, and staking, enhancing efficiency and reducing load on RPC nodes.",
+        "idea": "Build a simplified version of 'plume-network-season-2' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Salahnahryry/plume-network-season-2",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "ZyDrop-quickshare-qr",
+        "problem": "⚡ Simplify file sharing with ZyDrop, a secure LAN tool that transfers files and clipboard content effortlessly by scanning a QR code.",
+        "idea": "Build a simplified version of 'ZyDrop-quickshare-qr' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/AYANFAHMID/ZyDrop-quickshare-qr",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Tj_Took",
+        "problem": "🛠️ Enhance your productivity with Tj_Took, a lightweight Telegram bot platform for managing messages, automating tasks, and ensuring secure private operations.",
+        "idea": "Build a simplified version of 'Tj_Took' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/izwarirsyad/Tj_Took",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "pesu-slide-download-automator",
+        "problem": "📥 Automate slide downloads from PESU Academy with this Python script that simplifies access to course materials while ensuring data privacy.",
+        "idea": "Build a simplified version of 'pesu-slide-download-automator' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/neo63900/pesu-slide-download-automator",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "qiaomu-youtube-script",
+        "problem": "📝 Streamline YouTube with a simple script to copy all comments directly, bypassing API keys and loading limits for an efficient experience.",
+        "idea": "Build a simplified version of 'qiaomu-youtube-script' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Mamiss61eew/qiaomu-youtube-script",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "HeyTeaAutoDrawer",
+        "problem": "🖌️ Automate image drawing in specific apps on Windows with this Python script that simulates mouse actions for precise control.",
+        "idea": "Build a simplified version of 'HeyTeaAutoDrawer' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/121ssdfdfsv/HeyTeaAutoDrawer",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Firmware-Diffing",
+        "problem": "🛠️ Compare firmware versions using SHA256 hashes to identify file changes effectively with this simple Python script.",
+        "idea": "Build a simplified version of 'Firmware-Diffing' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Alosh-ui/Firmware-Diffing",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "temppy",
+        "problem": "🔍 Explore compile-time metaprogramming with temppy, a header-only C++23 interpreter that computes results without runtime parsing for efficient code execution.",
+        "idea": "Build a simplified version of 'temppy' using Python on mobile",
+        "libraries": [
+            "time",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/DobleJ31/temppy",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "openrgb-scripts",
+        "problem": "🔧 Automate and enhance OpenRGB functionality on Windows with portable Python scripts, designed for ease and efficiency without system installation.",
+        "idea": "Build a simplified version of 'openrgb-scripts' using Python on mobile",
+        "libraries": [
+            "sys"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Romanticisationphallales546/openrgb-scripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-for-devops",
+        "problem": "This repo list scripts for automation of day to day tasks of a computer user.",
+        "idea": "Build a simplified version of 'python-for-devops' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/AshuApurva14/python-for-devops",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "self-check",
+        "problem": "🚀 Monitor system performance and security with a robust script designed for diverse environments, ensuring alerts are relevant and actionable.",
+        "idea": "Build a simplified version of 'self-check' using Python on mobile",
+        "libraries": [
+            "sys",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/QShkan/self-check",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "pipeline-cli",
+        "problem": "🚀 Streamline your development workflow with pipeline-cli, a command-line tool for managing CI/CD pipelines efficiently.",
+        "idea": "Build a simplified version of 'pipeline-cli' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Suncloud2022/pipeline-cli",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-file-organizer-automation",
+        "problem": "📂 Organize your files easily with this Python script that sorts and categorizes them by type, creating folders for better management.",
+        "idea": "Build a simplified version of 'python-file-organizer-automation' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/monkey-luffy0/python-file-organizer-automation",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "release",
+        "problem": "🛠️ Streamline deployment of webDAV services with automated updates and easy configuration for home networks and local environments.",
+        "idea": "Build a simplified version of 'release' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/xuxulino/release",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "googledoc-revision-tracker",
+        "problem": "🗂️ Track and download Google Docs revision history effortlessly with this Python CLI tool, offering custom organization and flexible input options.",
+        "idea": "Build a simplified version of 'googledoc-revision-tracker' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Mouli569/googledoc-revision-tracker",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "pmcr-cli",
+        "problem": "🚀 Streamline project management with pmcr-cli, a command-line tool that enhances collaboration and efficiency for teams.",
+        "idea": "Build a simplified version of 'pmcr-cli' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/UbaiSalih/pmcr-cli",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Allew",
+        "problem": "🚀 Run and manage AI models effortlessly with Allew, an open-source tool offering a powerful CLI and compatibility with major AI providers.",
+        "idea": "Build a simplified version of 'Allew' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/vishishtpuri/Allew",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "gmail-ai-unsub",
+        "problem": "🚫 Streamline your inbox with Gmail AI Unsubscribe, an automated tool that uses AI to identify and remove unwanted marketing emails effortlessly.",
+        "idea": "Build a simplified version of 'gmail-ai-unsub' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/SPTSPH001/gmail-ai-unsub",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "try-cli",
+        "problem": "🏠 Organize your experiments with try-cli: a fast, zero-dependency tool for creating and navigating fresh directories tailored for your creative needs.",
+        "idea": "Build a simplified version of 'try-cli' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Farsya15/try-cli",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "ipynb-ai-cli-editor",
+        "problem": "🛠 Programmatically edit Jupyter Notebooks with this zero-dependency CLI tool, tailored for AI agents and automated workflows.",
+        "idea": "Build a simplified version of 'ipynb-ai-cli-editor' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Deltacros/ipynb-ai-cli-editor",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "http-cli",
+        "problem": "🌐 Streamline your API testing with HTTP CLI, a fast, colorful command-line tool that handles all HTTP methods and supports JSON formatting effortlessly.",
+        "idea": "Build a simplified version of 'http-cli' using Python on mobile",
+        "libraries": [
+            "json",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Leoparj/http-cli",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "CLI-Toolbox-Generator",
+        "problem": "🛠️ Generate structured Python CLIs effortlessly with this template-driven toolbox. Create command-line menus in seconds, no boilerplate needed.",
+        "idea": "Build a simplified version of 'CLI-Toolbox-Generator' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/voxo-yt/CLI-Toolbox-Generator",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "RiMCP_hybrid",
+        "problem": "🛠️ Build a flexible search and navigation tool for RimWorld’s source code and XML definitions, enabling AI-assisted retrieval and exploration.",
+        "idea": "Build a simplified version of 'RiMCP_hybrid' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Mezo1122/RiMCP_hybrid",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Youtube-Downloadify-app",
+        "problem": "🎥 Download videos and audio from YouTube easily using this Python CLI tool, featuring interactive menus and real-time progress tracking.",
+        "idea": "Build a simplified version of 'Youtube-Downloadify-app' using Python on mobile",
+        "libraries": [
+            "os",
+            "time",
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/hehehehehehehh123123213213213/Youtube-Downloadify-app",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "PyFlash",
+        "problem": "📝 Create and review custom flashcards using Python in a simple CLI game. Enhance your learning with this interactive tool.",
+        "idea": "Build a simplified version of 'PyFlash' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Petter12131451/PyFlash",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "csan",
+        "problem": "📚 Generate Cutter-Sanborn call numbers easily with `csan`, a CLI tool and Python library for organizing library books by author alphabetically.",
+        "idea": "Build a simplified version of 'csan' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Asadullah89/csan",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "solo1-cli-rs",
+        "problem": "Port of the Solo1 Python CLI tool to Rust",
+        "idea": "Build a simplified version of 'solo1-cli-rs' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/InboundFrog/solo1-cli-rs",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "SecureArchive",
+        "problem": "🔒 Secure your files with SecureArchive, a cross-platform tool that uses TitanCrypt's AES-256 encryption for safe and efficient data storage.",
+        "idea": "Build a simplified version of 'SecureArchive' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/NamXT/SecureArchive",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "VALIDATOR-APPLE-CLIV2.5",
+        "problem": "🍏 Validate Apple emails quickly with this Python CLI tool, offering fast info retrieval and file listing for efficient validation.",
+        "idea": "Build a simplified version of 'VALIDATOR-APPLE-CLIV2.5' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Shettyy369/VALIDATOR-APPLE-CLIV2.5",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "EMAIL-BOUNCE-CHECKER-CLIV4.2",
+        "problem": "📧 Validate email bounces efficiently with this Python CLI tool, ensuring accurate email delivery and improved campaign performance.",
+        "idea": "Build a simplified version of 'EMAIL-BOUNCE-CHECKER-CLIV4.2' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/WADSAD12QWh/EMAIL-BOUNCE-CHECKER-CLIV4.2",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "rag-dungeon-crawler",
+        "problem": "Transforming a legacy CLI-based Python dictionary game into a decoupled, containerized, AI-driven web application. The system leverages a microservices architecture, utilizing a serverless vector database for Retrieval-Augmented Generation (RAG) to create dynamic narratives and NPC interactions, monitored by enterprise observability tools.",
+        "idea": "Build a simplified version of 'rag-dungeon-crawler' using Python on mobile",
+        "libraries": [
+            "os",
+            "sys",
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/John-Swindell/rag-dungeon-crawler",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "didactic-broccoli",
+        "problem": "🧑🏫 Explore and teach data visualization concepts through engaging, interactive examples in this beginner-friendly Python project.",
+        "idea": "Build a simplified version of 'didactic-broccoli' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/jhyshy/didactic-broccoli",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "mental-health-digital-behavior-ML-Classification",
+        "problem": "📊 Analyze digital behavior to classify mental focus levels using machine learning and logistic regression in this beginner-friendly project.",
+        "idea": "Build a simplified version of 'mental-health-digital-behavior-ML-Classification' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/josechg/mental-health-digital-behavior-ML-Classification",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "HR-Analytics-Lab-2-Python",
+        "problem": "A Python-based HR Analytics Lab project for analyzing employee data, cleaning datasets, visualizing HR metrics, and generating actionable insights for workforce decision-making. Built with Pandas, NumPy, Matplotlib, and Seaborn, this beginner-friendly project demonstrates practical HR data analysis and visualization techniques.",
+        "idea": "Build a simplified version of 'HR-Analytics-Lab-2-Python' using Python on mobile",
+        "libraries": [
+            "pandas",
+            "numpy",
+            "matplotlib"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Himani214/HR-Analytics-Lab-2-Python",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "fijahu-18",
+        "problem": "🚀 Explore basic TypeScript functions with this simple project, showcasing core features and ease of use for beginners and developers alike.",
+        "idea": "Build a simplified version of 'fijahu-18' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Bariumhydroxidelacefern45/fijahu-18",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Hacktoberfest",
+        "problem": "🎃 Join Hacktoberfest 2025 to contribute to open-source projects and make your first pull request while engaging with the developer community.",
+        "idea": "Build a simplified version of 'Hacktoberfest' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/medicendash/Hacktoberfest",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "ai-network-health-checker",
+        "problem": "AI-powered network health monitoring tool using Python, Netmiko, and scikit-learn Isolation Forest for anomaly detection. Beginner-friendly project.",
+        "idea": "Build a simplified version of 'ai-network-health-checker' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/NetworkThinkTank-Labs/ai-network-health-checker",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "student-score-predictor",
+        "problem": "🎓 Predict student exam scores using study habits and academic history with this beginner-friendly machine learning project in Python and Scikit-learn.",
+        "idea": "Build a simplified version of 'student-score-predictor' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/safkaneo/student-score-predictor",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "uv-fastapi-tortoise",
+        "problem": "🚀 Build efficient APIs using FastAPI with Tortoise ORM for seamless database integration in a structured template project.",
+        "idea": "Build a simplified version of 'uv-fastapi-tortoise' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Ggboybbbffkfcdf/uv-fastapi-tortoise",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python_beginner_projects",
+        "problem": "\"Python basic logic building projects like Calculator, Guessing Game, and Loops practice for Data Science prep.\"",
+        "idea": "Build a simplified version of 'python_beginner_projects' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/hir362239desh/python_beginner_projects",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "aws-ai-label-sentiment",
+        "problem": "A beginner-friendly project that uses **Amazon Rekognition** to detect image labels and **Amazon Comprehend** to perform sentiment analysis — all powered by Python and AWS SDK. ",
+        "idea": "Build a simplified version of 'aws-ai-label-sentiment' using Python on mobile",
+        "libraries": [
+            "time",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/abdulrafey5/aws-ai-label-sentiment",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-engineering-journey",
+        "problem": "My journey from Python beginner to AI & Automation Engineer. Daily coding practice, projects, and experiments.",
+        "idea": "Build a simplified version of 'python-engineering-journey' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/thisisahmad24/python-engineering-journey",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Simple_Python_Projects",
+        "problem": "Collection of beginner-friendly Python projects 🗃️ designed to help learners understand core programming concepts through hands-on practice. ",
+        "idea": "Build a simplified version of 'Simple_Python_Projects' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/chintu901/Simple_Python_Projects",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Python",
+        "problem": "This repository contains a collection of beginner to intermediate-level Python programs and mini-projects. It is designed to help learners understand the fundamentals of Python programming through hands-on practice.",
+        "idea": "Build a simplified version of 'Python' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Khadijakhalil1/Python",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Learn_Data_Science_with-_Project",
+        "problem": "Learn_Data_Science is a structured, beginner-to-intermediate level learning repository focused on building a strong foundation in Data Science. It covers core concepts, hands-on practice, and real-world projects using Python and popular data analysis tools.",
+        "idea": "Build a simplified version of 'Learn_Data_Science_with-_Project' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/VishalBharati226/Learn_Data_Science_with-_Project",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "webimagescraper-api",
+        "problem": "🌐 Scrape images from any website effortlessly with our API, returning only the image URLs you need for your projects.",
+        "idea": "Build a simplified version of 'webimagescraper-api' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Tereex/webimagescraper-api",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "wordrhymes-api",
+        "problem": "📝 Generate rhyming words effortlessly with the Word Rhymes API, a simple tool to enhance your writing and creative projects.",
+        "idea": "Build a simplified version of 'wordrhymes-api' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Assaultttt/wordrhymes-api",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "mcp-learning-adapter",
+        "problem": "🔍 Learn MCP server APIs and cut token usage by 80% with this intelligent adapter that filters responses and optimizes data for efficiency.",
+        "idea": "Build a simplified version of 'mcp-learning-adapter' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/babydoll1110/mcp-learning-adapter",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "fastscaff",
+        "problem": "🚀 Scaffold FastAPI projects quickly with FastScaff. Generate standardized structures effortlessly and streamline your development process.",
+        "idea": "Build a simplified version of 'fastscaff' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/sarmadshakeel/fastscaff",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "JET-coding-assignment",
+        "problem": "A Python-based solution for the Just Eat Takeaway.com Early Careers coding assignment. The project fetches restaurant data from the Just Eat API using a UK postcode, parses the JSON response, and displays the first 10 restaurants with specific details",
+        "idea": "Build a simplified version of 'JET-coding-assignment' using Python on mobile",
+        "libraries": [
+            "json",
+            "os",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/amine-za/JET-coding-assignment",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "public-opinion-api",
+        "problem": "🌐 Access real-time public opinion data and sentiment analysis through a simple API, enhancing your media monitoring and research projects.",
+        "idea": "Build a simplified version of 'public-opinion-api' using Python on mobile",
+        "libraries": [
+            "time",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/nassidev11/public-opinion-api",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "powersub-demo-1374",
+        "problem": "⚡ Enhance your projects with PowerSub, a powerful and flexible subscription management system for seamless user experiences.",
+        "idea": "Build a simplified version of 'powersub-demo-1374' using Python on mobile",
+        "libraries": [
+            "sys"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/MBS-ADM/powersub-demo-1374",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "powersub-demo-5815",
+        "problem": "🚀 Streamline your workflow with powersub-demo-5815, a demo tool that enhances project collaboration and efficiency.",
+        "idea": "Build a simplified version of 'powersub-demo-5815' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/stevyudi/powersub-demo-5815",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "powersub-demo-9577",
+        "problem": "🔍 Discover and explore PowerSub, a powerful demo project for enhancing subscription management and automation in your applications.",
+        "idea": "Build a simplified version of 'powersub-demo-9577' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Leon-0/powersub-demo-9577",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "powersub-demo-8518",
+        "problem": "🔧 Streamline your workflow with powersub-demo-8518, a powerful tool for efficient task management and automation in your projects.",
+        "idea": "Build a simplified version of 'powersub-demo-8518' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Harshrajpoot/powersub-demo-8518",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "teGATElx",
+        "problem": "🌐 Streamline your data analysis with teGATElx, a flexible tool for efficient data integration and visualization in research projects.",
+        "idea": "Build a simplified version of 'teGATElx' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/ericdavi0/teGATElx",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "amanansdiahnid-3",
+        "problem": "🚀 Simplify user interactions with amanansdiahnid-3, a streamlined tool for efficient project management and collaboration.",
+        "idea": "Build a simplified version of 'amanansdiahnid-3' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/arkarkfh12/amanansdiahnid-3",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "kirmanjiku-17",
+        "problem": "🚀 Enhance your workflow with kirmanjiku-17, a tool designed to streamline tasks and boost productivity in your projects.",
+        "idea": "Build a simplified version of 'kirmanjiku-17' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Aastha12378/kirmanjiku-17",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "paypal-acm0u",
+        "problem": "🎲 Explore demo files in this randomly created repository, inspired by PayPal, showcasing simple projects and examples for developers.",
+        "idea": "Build a simplified version of 'paypal-acm0u' using Python on mobile",
+        "libraries": [
+            "os",
+            "random",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/mikikassudaree/paypal-acm0u",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "githubInfoJson",
+        "problem": "📂 Portfolio Helper Repository: A supporting backend for my portfolio site, storing project data in JSON and auto-updating it via GitHub Actions. Uses a Python script to fetch repo details from the GitHub API, ensuring my portfolio always displays fresh and accurate project information about my github repos.",
+        "idea": "Build a simplified version of 'githubInfoJson' using Python on mobile",
+        "libraries": [
+            "json",
+            "os",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/kishandev2509/githubInfoJson",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Updater-Releases",
+        "problem": "🚀 Quickly update your applications from GitHub releases with this lightweight, user-friendly utility written in Python.",
+        "idea": "Build a simplified version of 'Updater-Releases' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Iyanyourbae/Updater-Releases",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Rust-demo---Python-Comments-Remover-",
+        "problem": "🗑️ Remove comments from Python scripts quickly and easily with this Rust utility, streamlining your code for clarity and efficiency.",
+        "idea": "Build a simplified version of 'Rust-demo---Python-Comments-Remover-' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Firaz33/Rust-demo---Python-Comments-Remover-",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Scripts",
+        "problem": "🛠️ Automate tasks on Windows and Linux with useful utility scripts to streamline your workflow and make repetitive actions easier.",
+        "idea": "Build a simplified version of 'Scripts' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Estarking57/Scripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python",
+        "problem": "A collection of Python scripts for system automation, data processing, and general utility tasks.",
+        "idea": "Build a simplified version of 'python' using Python on mobile",
+        "libraries": [
+            "sys"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/JaminShanti/python",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-utils-toolkit",
+        "problem": "🔧 Enhance your workflow with reusable Python utility scripts for file, text, date, web, and system tasks. Simplify coding with practical solutions.",
+        "idea": "Build a simplified version of 'python-utils-toolkit' using Python on mobile",
+        "libraries": [
+            "sys",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/VOIDsymbyote/python-utils-toolkit",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "common-utils",
+        "problem": "A personal collection of general-purpose PowerShell and Python scripts used for automation, system utilities, and small tooling tasks. Centralizes standalone scripts that don’t warrant their own repositories.",
+        "idea": "Build a simplified version of 'common-utils' using Python on mobile",
+        "libraries": [
+            "os",
+            "sys",
+            "re"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/DeadDove13/common-utils",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-esg-tools",
+        "problem": " \"Python scripts & utilities for ESG data analysis and automation\"",
+        "idea": "Build a simplified version of 'python-esg-tools' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/adama-diallo-rse/python-esg-tools",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "py-sysutils",
+        "problem": "Python system utility scripts: monitoring, process management, disk analysis and more",
+        "idea": "Build a simplified version of 'py-sysutils' using Python on mobile",
+        "libraries": [
+            "sys",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/foredawn32/py-sysutils",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "package-json-sorter",
+        "problem": "A simple CLI tool to sort package.json dependencies and scripts alphabetically.",
+        "idea": "Build a simplified version of 'package-json-sorter' using Python on mobile",
+        "libraries": [
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/gbvk312/package-json-sorter",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "AutoSendNewFilesDiscord",
+        "problem": "Script that automatically sends new files from a directory to Discord. Works with webhook or selfbot.",
+        "idea": "Build a simplified version of 'AutoSendNewFilesDiscord' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Benjas333/AutoSendNewFilesDiscord",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "cli-scripts",
+        "problem": "random utility cli scripts in python",
+        "idea": "Build a simplified version of 'cli-scripts' using Python on mobile",
+        "libraries": [
+            "random"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/wodoame/cli-scripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "ScriptHub",
+        "problem": "A versatile collection of reusable scripts and utilities written in Python, Bash and C++. Designed to simplify everyday tasks, automate workflows and provide quick solutions for development, system operations and experimentation.",
+        "idea": "Build a simplified version of 'ScriptHub' using Python on mobile",
+        "libraries": [
+            "sys",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Akshaypatil15/ScriptHub",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "FeatureExtractionOfOrthophotosScrpits",
+        "problem": "A collection of Python scripts for semantic segmentation and feature extraction from orthophoto GeoTIFFs (drone/satellite imagery). The project trains and runs U-Net models to detect and vectorise land features — Buildings, Roads, Railway, Bridge, Water, and Utility — outputting results as shapefiles.",
+        "idea": "Build a simplified version of 'FeatureExtractionOfOrthophotosScrpits' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/AlaxNeon/FeatureExtractionOfOrthophotosScrpits",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "PyToolkit",
+        "problem": "A collection of useful Python utility scripts",
+        "idea": "Build a simplified version of 'PyToolkit' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Ayush442842q/PyToolkit",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "gmail-bill-search",
+        "problem": "A Python script that scans your Gmail for utility bill emails and extracts billing amounts by provider",
+        "idea": "Build a simplified version of 'gmail-bill-search' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/cheonu/gmail-bill-search",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Python-MiniProjects",
+        "problem": "A collection of small Python projects and utilities, showcasing practical implementations of scripting, automation, and problem-solving concepts.",
+        "idea": "Build a simplified version of 'Python-MiniProjects' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 0,
+        "link": "https://github.com/Csushobhit/Python-MiniProjects",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "trakt-tv-backup",
+        "problem": "📦 Backup your Trakt.tv user profile effortlessly with this PowerShell script, ensuring you capture all your data and settings without hassle.",
+        "idea": "Build a simplified version of 'trakt-tv-backup' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/logesh156/trakt-tv-backup",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "PythonAutomation2",
+        "problem": "actions-bot which executes a python script roughly every 8 minutes that appends information to a text file",
+        "idea": "Build a simplified version of 'PythonAutomation2' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/BorisDundakov/PythonAutomation2",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "GitHub-Account-Creator-Bot",
+        "problem": "GitHub Account Creator is a Python tool that enables automatic account creation on GitHub. Automatically generating your credentials, the script quickly creates a new account.",
+        "idea": "Build a simplified version of 'GitHub-Account-Creator-Bot' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/Maneteomw/GitHub-Account-Creator-Bot",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "powersub-demo-1807",
+        "problem": "🚀 Demonstrate power subscription management with easy-to-use tools for efficient energy consumption and cost savings in this interactive GitHub project.",
+        "idea": "Build a simplified version of 'powersub-demo-1807' using Python on mobile",
+        "libraries": [
+            "os"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/DaniloRasovic/powersub-demo-1807",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "termai",
+        "problem": "🤖 Access Google's Gemini AI effortlessly with Termai, a lightweight CLI tool for Termux and Linux, designed for smooth command line integration.",
+        "idea": "Build a simplified version of 'termai' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/Madjos76/termai",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "paper-digest",
+        "problem": "A production-minded Python tool for tracking newly published arXiv papers and generating daily research digests.",
+        "idea": "Build a simplified version of 'paper-digest' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/X-PG13/paper-digest",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "subsync",
+        "problem": "🎥 Transcribe and translate YouTube subtitles quickly with SubSync, a Python CLI tool for seamless video accessibility.",
+        "idea": "Build a simplified version of 'subsync' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/miaubonito/subsync",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Sortify",
+        "problem": "📂 Organize your cluttered directories effortlessly with Sortify, a Python CLI tool that sorts files into categories based on their extensions.",
+        "idea": "Build a simplified version of 'Sortify' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/dreamworldbangkok/Sortify",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "thanos",
+        "problem": "🗑️ Eliminate half of your directory's files with a simple Python CLI tool, inspired by Thanos—use with caution, as deletions are permanent.",
+        "idea": "Build a simplified version of 'thanos' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/57MDZAID/thanos",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Generative-AI-",
+        "problem": "A complete A-to-Z Generative AI learning repository with Python, Large Language Models (LLMs), prompt engineering, RAG pipelines, AI agents, vector databases, and real-world Generative AI projects for beginners and advanced learners",
+        "idea": "Build a simplified version of 'Generative-AI-' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "Data",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/dr-mushtaq/Generative-AI-",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "student-marks-prediction",
+        "problem": "A beginner-friendly machine learning project that predicts student marks based on study hours, attendance, and assignments using Linear Regression. Built with Python, scikit-learn, Streamlit, and a clean industry-level project structure.",
+        "idea": "Build a simplified version of 'student-marks-prediction' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/UMESH-KALE0777/student-marks-prediction",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "UserForge",
+        "problem": "🚀 Generate realistic user profiles in seconds with an intuitive interface, streamlining your projects and enhancing user engagement.",
+        "idea": "Build a simplified version of 'UserForge' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/Forrosiver/UserForge",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "FastAPI-Journal-Automation-with-Generative-And-AI-Compound-AI-System",
+        "problem": "🐙 FastAPI Journal Automation uses Gemini and Groq LLaMA to auto-create and enrich journal articles via CORE API, with Pydantic validation and JSON output.",
+        "idea": "Build a simplified version of 'FastAPI-Journal-Automation-with-Generative-And-AI-Compound-AI-System' using Python on mobile",
+        "libraries": [
+            "json",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/aligoraya202/FastAPI-Journal-Automation-with-Generative-And-AI-Compound-AI-System",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "UtilityScripts",
+        "problem": "Utility scripts written in Shell Script and Python",
+        "idea": "Build a simplified version of 'UtilityScripts' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/lena-miyamoto/UtilityScripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Python-Projects-Lab",
+        "problem": "A collection of Python mini projects and scripts demonstrating coding and problem-solving skills. Includes interactive games, utilities, and exercises across various Python concepts. Showcases hands-on experience and practical Python proficiency.",
+        "idea": "Build a simplified version of 'Python-Projects-Lab' using Python on mobile",
+        "libraries": [
+            "os"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/anushka072005/Python-Projects-Lab",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "cyber-utility-belt",
+        "problem": "A collection of InfoSec and Python automation scripts.",
+        "idea": "Build a simplified version of 'cyber-utility-belt' using Python on mobile",
+        "libraries": [
+            "os"
+        ],
+        "category": "Automation",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/ayeshakhan2004/cyber-utility-belt",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "toolscripts",
+        "problem": "A comprehensive collection of utility scripts (primarily Python and Bash) to streamline development, system administration, and daily workflows across various platforms.",
+        "idea": "Build a simplified version of 'toolscripts' using Python on mobile",
+        "libraries": [
+            "os",
+            "sys",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 1,
+        "link": "https://github.com/jie-meng/toolscripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "ultrasonic-radar",
+        "problem": "🔍 Build an ultrasonic radar using an embedded Linux SoC, enabling remote viewing and real-time measurements through a simple Python script.",
+        "idea": "Build a simplified version of 'ultrasonic-radar' using Python on mobile",
+        "libraries": [
+            "time",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 2,
+        "link": "https://github.com/zahrawou/ultrasonic-radar",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "xcode-xcstrings-csv-tool",
+        "problem": "🌍 Automate iOS/macOS localization by updating Xcode String Catalogs with CSV files, saving time and reducing errors in translation workflows.",
+        "idea": "Build a simplified version of 'xcode-xcstrings-csv-tool' using Python on mobile",
+        "libraries": [
+            "os",
+            "time",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 2,
+        "link": "https://github.com/TheEnd14147/xcode-xcstrings-csv-tool",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "GenAI-Architect-70-Hands-On-Projects",
+        "problem": "🚀 Transform your skills with 70 hands-on projects in Generative AI, guiding you from beginner to production-ready architect with real-world applications.",
+        "idea": "Build a simplified version of 'GenAI-Architect-70-Hands-On-Projects' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 2,
+        "link": "https://github.com/Brucewaynehatake/GenAI-Architect-70-Hands-On-Projects",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "python-fastapi-starter-api-project",
+        "problem": "This repository offers a solid foundation for building APIs using FastAPI, SQLAlchemy, and PostgreSQL. 🚀 Dive in to explore best practices and a modular structure for your next project! 🐙",
+        "idea": "Build a simplified version of 'python-fastapi-starter-api-project' using Python on mobile",
+        "libraries": [
+            "os",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 2,
+        "link": "https://github.com/YuenEye/python-fastapi-starter-api-project",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Python-Playground",
+        "problem": "A continuously evolving collection of Python experiments, utilities, practice scripts, and concept demonstrations. This repository serves as a personal sandbox for learning, testing ideas, and refining problem‑solving skills over time.",
+        "idea": "Build a simplified version of 'Python-Playground' using Python on mobile",
+        "libraries": [
+            "os",
+            "time",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 2,
+        "link": "https://github.com/InterCentury/Python-Playground",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "kaalin-python",
+        "problem": "Karakalpak language toolkit for Python — Latin/Cyrillic script conversion, number-to-words, and string utilities",
+        "idea": "Build a simplified version of 'kaalin-python' using Python on mobile",
+        "libraries": [
+            "requests",
+            "json"
+        ],
+        "category": "General",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 2,
+        "link": "https://github.com/dontbeidle/kaalin-python",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "Build-AI-Now",
+        "problem": "🤖 Build your AI skills through hands-on projects and a structured roadmap designed for beginners to experienced developers.",
+        "idea": "Build a simplified version of 'Build-AI-Now' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 3,
+        "link": "https://github.com/fireure/Build-AI-Now",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "code-sensei",
+        "problem": "🥋 Teach yourself coding in real-time using your own projects with this free, open-source Claude Code plugin for active learning.",
+        "idea": "Build a simplified version of 'code-sensei' using Python on mobile",
+        "libraries": [
+            "time",
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 3,
+        "link": "https://github.com/wewpellex21/code-sensei",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "synapz",
+        "problem": "synapz is a research prototype exploring how large language models can adapt teaching content to different cognitive styles. built over a 48-hour sprint with a strict $50 api budget, this project implements a scientific framework to test whether adaptive teaching produces measurably better results than static approaches.",
+        "idea": "Build a simplified version of 'synapz' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 3,
+        "link": "https://github.com/xmowgofficial/synapz",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "scaffold",
+        "problem": "Turn any CLI tool into a desktop GUI - like magic, but with JSON. Drop in a JSON schema describing a CLI tool's flags and Scaffold generates an interactive form with live command preview, process execution, and presets. Single Python file, one dependency (PySide6), works offline. Use any LLM to generate schemas automatically. Simple. Powerful.",
+        "idea": "Build a simplified version of 'scaffold' using Python on mobile",
+        "libraries": [
+            "json",
+            "re"
+        ],
+        "category": "Developer Tool",
+        "difficulty": "Easy",
+        "pydroid_ready": true,
+        "stars": 4,
+        "link": "https://github.com/Zencache/scaffold",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "CryptoPriceList",
+        "problem": "This repository features a Python script that automatically fetches and updates the latest cryptocurrency prices for Bitcoin, Ethereum, and Litecoin every five minutes. Prices are displayed in the README, ensuring real-time updates using the CoinGecko API and GitHub Actions for automation.",
+        "idea": "Build a simplified version of 'CryptoPriceList' using Python on mobile",
+        "libraries": [
+            "os",
+            "time",
+            "re"
+        ],
+        "category": "API",
+        "difficulty": "Beginner",
+        "pydroid_ready": true,
+        "stars": 6,
+        "link": "https://github.com/nno-official/CryptoPriceList",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "hacker-scripts",
+        "problem": "🚀 Automate everyday tasks with a collection of unique scripts designed to enhance productivity and streamline your workflow.",
+        "idea": "Build a simplified version of 'hacker-scripts' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 6,
+        "link": "https://github.com/watthatdo/hacker-scripts",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "flashtensors",
+        "problem": "🚀 Accelerate your AI projects with flashtensors, a fast inference engine that loads large models on a single GPU in under 2 seconds.",
+        "idea": "Build a simplified version of 'flashtensors' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 11,
+        "link": "https://github.com/cotesiito/flashtensors",
+        "added_on": "2026-04-13"
+    },
+    {
+        "title": "port-for",
+        "problem": "`port-for` is a command-line utility and a python library that helps with local TCP ports managment. `port-for <foo>` script finds an unused port and associates it with `<foo>`. Subsequent calls will return the same port number.",
+        "idea": "Build a simplified version of 'port-for' using Python on mobile",
+        "libraries": [
+            "re"
+        ],
+        "category": "General",
+        "difficulty": "Intermediate",
+        "pydroid_ready": true,
+        "stars": 31,
+        "link": "https://github.com/fizyk/port-for",
+        "added_on": "2026-04-13"
+    }
+]
