@@ -1,0 +1,356 @@
+[
+  {
+    "title": "[BOUNTY] theakeni bounty:",
+    "url": "https://github.com/Reserve-Station/Reserve-Station/pull/262",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "[BOUNTY] Discord Bounty Notification Bot",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1025",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[BOUNTY] Bounty Countdown Timer Component",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1024",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "Autonomous Bounty-Hunting Agent [Bounty #861]",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1026",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "bounty-hacker",
+    "url": "https://github.com/UnBreakable-Project/PS-2026-1/pull/16",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat: Bounty Countdown Timer - Bounty #826",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/992",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat(bounty): add bounty_create MCP tool",
+    "url": "https://github.com/aibtcdev/aibtc-mcp-server/pull/440",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "[Agent] \ud83c\udfed Bounty T3: Bounty Analytics Dashboard",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/979",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "[BOUNTY] Cabelos Gradientes",
+    "url": "https://github.com/Gaby-Station/Gaby-Station/pull/649",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "feat: Add search bar to bounties page (Bounty #823)",
+    "url": "https://github.com/TeapoyY/solfoundry/pull/25",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat: add autonomous bounty-hunting agent (Bounty #861)",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1009",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat: implement bounty countdown timer component for bounty #826",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1023",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat: advanced bounty search with filters (Bounty #842)",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/948",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "Bounty command",
+    "url": "https://github.com/Jayant2908/BLT/pull/9",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "feat: Search Bar on Bounties Page - Bounty #823",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/991",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[BOUNTY] ssd timer",
+    "url": "https://github.com/Goob-Station/Goob-Station/pull/6441",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "feat: bounty updates",
+    "url": "https://github.com/Zaiustide/ACE/pull/34",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[BOUNTY: #23] Integration tests for bounty claim lifecycle",
+    "url": "https://github.com/raiden076/Prism/pull/38",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "feat: interactive bounty lifecycle flow diagram (Bounty #851)",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/944",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "fix: Update bounties page with new preferred bounty payment service",
+    "url": "https://github.com/libretro/docs/pull/1137",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[BOUNTY] CHANGELOG Generator Skill",
+    "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/pull/592",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "Adds temporary flavortext [Bounty]",
+    "url": "https://github.com/Rotwood-Vale/Ratwood-2.0/pull/1383",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "feat(ai): Multi-LLM Bounty Description Enhancer - Bounty #848",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/985",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat(telegram): Telegram Bot for Bounty Notifications - Bounty #847",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/983",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat(frontend): add search bar to bounties page (bounty #823)",
+    "url": "https://github.com/TeapoyY/solfoundry/pull/21",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "Bounty smother",
+    "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/pull/900",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "Adds Cargo Bounties",
+    "url": "https://github.com/ParadiseSS13/Paradise/pull/31833",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[BOUNTY]",
+    "url": "https://github.com/UltraDAGcom/core/issues/3",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "[Agent] \ud83c\udfed Bounty T2: Interactive Bounty Flow Diagram Component",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/972",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[Agent] \ud83c\udfed Bounty T3: Full Autonomous Bounty-Hunting Agent",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/971",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat: [BOUNTY #831] Complete bounty flow animated GIF - Closes #831",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1021",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "feat(frontend): interactive SVG bounty lifecycle flow diagram (Bounty T2 #851)",
+    "url": "https://github.com/TeapoyY/solfoundry/pull/27",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "[BOUNTY] nova esp\u00e9cie capris ",
+    "url": "https://github.com/Gaby-Station/Gaby-Station/pull/647",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 5,
+    "trust": "high"
+  },
+  {
+    "title": "fix: mobile responsive polish for bounty cards, nav, hero (Bounty #833)",
+    "url": "https://github.com/SolFoundry/solfoundry/pull/1029",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "Bounty Hacker - Write-up",
+    "url": "https://github.com/UnBreakable-Project/PS-2026-1/pull/19",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "Simple, Bounty, Oopsie, CCTV",
+    "url": "https://github.com/UnBreakable-Project/PS-2026-1/pull/11",
+    "source": "github",
+    "type": "paid",
+    "difficulty": "unknown",
+    "score": 4,
+    "trust": "medium"
+  },
+  {
+    "title": "What\u2019s the best workflow to add TypeScript to an existing Node.js project?",
+    "url": "https://stackoverflow.com/questions/79928522/what-s-the-best-workflow-to-add-typescript-to-an-existing-node-js-project",
+    "source": "stackoverflow",
+    "type": "reputation",
+    "bounty": 50,
+    "difficulty": "unknown",
+    "score": 3,
+    "trust": "medium"
+  },
+  {
+    "title": "How to add Paste button in UIMenu such that the system &quot;allow app to paste&quot; prompt does not appear",
+    "url": "https://stackoverflow.com/questions/79928513/how-to-add-paste-button-in-uimenu-such-that-the-system-allow-app-to-paste-prom",
+    "source": "stackoverflow",
+    "type": "reputation",
+    "bounty": 50,
+    "difficulty": "unknown",
+    "score": 3,
+    "trust": "medium"
+  },
+  {
+    "title": "Dark Theme Brightness Inconsistency Between Main Window and New Windows",
+    "url": "https://stackoverflow.com/questions/79597644/dark-theme-brightness-inconsistency-between-main-window-and-new-windows",
+    "source": "stackoverflow",
+    "type": "reputation",
+    "bounty": 50,
+    "difficulty": "unknown",
+    "score": 3,
+    "trust": "medium"
+  }
+]
